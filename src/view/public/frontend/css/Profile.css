@@ -287,7 +287,7 @@ input[type=radio]:checked:after {
 }
 
 .list-withdraw-header.list-tabs-rutrien .item-withdraw-header {
-    height: 70px;
+    height: 145px;
 }
 
 .custom-select {
@@ -543,6 +543,8 @@ button.btnruttien_depoin {
     display: flex;
     align-items: center;
     gap: 0px 5px;
+    margin-bottom: 10px;
+
 }
 
 .item-withdraw-header.active {
@@ -561,19 +563,19 @@ button.btnruttien_depoin {
 
 
 .item-withdraw-header {
+    background: rgba(204,204,204,0.6);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 146px;
+    width: 200px;
     height: 45px;
     margin: 0 6px 5px 0;
     color: #3f4f75;
     font-size: 15px;
-    border: solid 2px #e7f5ff;
-    background: #fff;
     border-radius: 10px;
     box-sizing: border-box;
     list-style: none;
+    flex-direction: column;
 }
 
 .WithdrawApplication {
@@ -589,26 +591,51 @@ button.btnruttien_depoin {
 }
 
 
+.WithdrawApplication.box-tocal .item-withdraw-header {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    width: 125px;
+    height: 37px;
+    flex-direction: unset;
+}
+
+.WithdrawApplication.box-tocal .icon-banking {
+    width: 25px;
+    height: 25px;
+}
+
+.WithdrawApplication.box-tocal .item-withdraw-header .icon-banking {
+    margin-bottom: 0px;
+}
+
+.WithdrawApplication.box-tocal .item-withdraw-header span {
+    font-size: 16px;
+}
+
+
+
 
 .withdraw-content .ant-card-head-title {
     text-transform: uppercase;
 }
 .item-withdraw-header span {
     margin-left: 5px;
+    font-size: 19px;
+    color: #444;
 }
 .icon-banking {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
+    width: 50px;
+    height: 50px;
     mask: url(/public/438f90d7c765cf93426ac599216a0586.svg) no-repeat center;
     mask-size: contain;
-    background: #9499b6;
+    background: #444;
+    margin-bottom: 10px;
 }
 
 .item-withdraw-header:last-child .icon-banking {
     mask: url(/public/a0132bbdeae4a1544f5c0ebc6eb01f18.svg) no-repeat center;
     mask-size: contain;
-    background-color: #9499b6;
+    background-color: #444;
 }
 
 .item-withdraw-header.active .icon-banking {
