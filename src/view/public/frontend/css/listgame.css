@@ -56,6 +56,13 @@
   cursor: pointer;
 }
 
+.game_card2 {
+  position: relative;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
 /* Thêm wrapper để chứa hình ảnh và lớp phủ */
 .game_card_wrapper {
   position: relative;
@@ -63,13 +70,27 @@
   height: 200px;
 }
 
+.game_card_wrapper2 {
+  position: relative;
+  width: 100%;
+}
+
+
 .game_thumbnail {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: filter 0.3s ease; /* Hiệu ứng làm mờ mượt mà */
+  transition: filter 0.3s ease;
 }
+
+.game_thumbnail2 {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease; 
+}
+
 
 /* Lớp phủ */
 .game_overlay {

@@ -1,5 +1,6 @@
 import '../../public/frontend/css/listgame.css'
 
+
 function ListGameMobile ({ list }) {
   return (
     <div className='div_game_tong'>

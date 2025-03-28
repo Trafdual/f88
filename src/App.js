@@ -19,6 +19,7 @@ import CasinoLayout from './view/frontend/pages/Casino/CasinoLayout'
 import NoHuLayout from './view/frontend/pages/NoHu/NoHuLayout'
 import BanCaLayout from './view/frontend/pages/BanCa/BanCaLayout'
 import HoaHongLayout from './view/frontend/pages/HoaHong/HoaHongLayout'
+import TheThaoMobile from './view/frontend/pages/TheThao/TheThaoMobile'
 
 function App () {
   return (
@@ -33,7 +34,7 @@ function App () {
             <Route path='nohu' element={<NoHuLayout />} />
             <Route path='banca' element={<BanCaLayout />} />
             <Route path='hoahong' element={<HoaHongLayout />} />
-
+            <Route path='thethaomobile' element={<TheThaoMobile />} />
           </Route>
 
           <Route path='/WebsiteProfile' element={<WebsiteProfile />}>
