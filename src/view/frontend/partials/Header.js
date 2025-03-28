@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,14 @@ import "slick-carousel/slick/slick-theme.css";
 const Header = ({ onLoginClick, onSignupClick }) => {
   const [showSuccessBox, setShowSuccessBox] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [time, setTime] = useState(new Date());
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(new Date());
+    }, 1000); 
 
+    return () => clearInterval(interval); 
+  }, []);
   const handleLoginClick = (event) => {
     event.preventDefault();
     onLoginClick();
@@ -107,7 +114,7 @@ const Header = ({ onLoginClick, onSignupClick }) => {
 
             <div className="box-header-right-top">
               <div className="settime-auto-header">
-                <p>{new Date().toLocaleString()}</p>
+              <p>{time.toLocaleString()}</p>
               </div>
               <div className="box-nav-desk-header-top">
                 <ul class="box-no-active-sigin">

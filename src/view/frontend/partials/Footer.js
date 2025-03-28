@@ -73,10 +73,7 @@ const Footer = () => {
           </div>
           <div className="desc-footer-top">
             <span>
-              F8BET là một nhà cái có giấy phép cá cược trực tuyến hợp pháp do
-              Isle of Man và Khu kinh tế Cagayan and Freeport cấp. Với bề dày
-              kinh nghiệm và danh tiếng phục vụ hơn 10 triệu người chơi, F8BET
-              đã và đang khẳng định vị thế của mình [...]
+            3TWIN là một trong những nhà cái hàng đầu trong lĩnh vực cá cược trực tuyến tại Châu Âu. Với sứ mệnh cung cấp trải nghiệm độc đáo và an toàn cho người chơi, 3TWIN không chỉ cung cấp các trò chơi cá cược phong phú mà còn mang đến dịch vụ khách hàng chuyên nghiệp và tiện lợi. Với sự đa dạng về các trò chơi casino, thể thao và e-sports, cùng với các chương trình khuyến mãi hấp dẫn, 3TWIN là lựa chọn lý tưởng cho những ai đam mê cá cược trực tuyến. [...]
             </span>
             <span className="show-footer-top">Xem thêm</span>
           </div>
