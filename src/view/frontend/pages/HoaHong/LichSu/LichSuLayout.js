@@ -1,10 +1,41 @@
 import '../../../../public/frontend/scss/lichsu.scss'
 import { useState } from 'react'
+import { Table } from 'antd'
 function LichSuLayout () {
   const today = new Date().toISOString().split('T')[0]
 
   const [date, setDate] = useState(today)
   const [enddate, setendDate] = useState(today)
+
+  const data = []
+
+  const columns = [
+    {
+      title: 'Thời gian',
+      dataIndex: 'datehistory',
+      key: 'datehistory',
+      width: 200
+    },
+
+    {
+      title: 'Doanh số nhóm',
+      dataIndex: 'doanhsonhom',
+      key: 'doanhsonhom',
+      width: 200
+    },
+    {
+      title: 'Hoa hồng',
+      dataIndex: 'hoahonghistory',
+      key: 'hoahonghistory',
+      width: 150
+    },
+    {
+      title: 'Trạng thái',
+      dataIndex: 'trangthai',
+      key: 'trangthai',
+      width: 150
+    }
+  ]
 
   return (
     <div className='divtongquan_container'>
@@ -66,22 +97,14 @@ function LichSuLayout () {
               </svg>
             </div>
           </div>
-          <div>
-            <table className='rebate-table'>
-              <thead>
-                <tr>
-                  <th>Thời gian</th>
-                  <th>Doanh số nhóm</th>
-                  <th>Hoa hồng</th>
-                  <th>Trạng thái</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colSpan={4}>không có dữ liệu</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className='table-history'>
+            <Table
+              dataSource={data}
+              columns={columns}
+              pagination={false}
+              rowKey='time'
+              scroll={{ x: 'max-content' }}
+            />
           </div>
         </div>
       </div>

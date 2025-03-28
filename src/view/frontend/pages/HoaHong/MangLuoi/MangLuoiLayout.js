@@ -1,8 +1,31 @@
 import { useState } from 'react'
 import '../../../../public/frontend/scss/mangluoi.scss'
+import { Table } from 'antd'
 function MangluoiLayout () {
   const today = new Date().toISOString().split('T')[0]
   const [date, setDate] = useState(today)
+  const data = []
+
+  const columns = [
+    {
+      title: 'Tên người dùng - Cấp độ',
+      dataIndex: 'name-level',
+      key: 'name-level',
+      width: 200
+    },
+    {
+      title: 'Hoa hồng',
+      dataIndex: 'hoahong',
+      key: 'hoahong',
+      width: 150
+    },
+    {
+      title: 'Doanh số cá nhân',
+      dataIndex: 'doanhso',
+      key: 'doanhso',
+      width: 200
+    }
+  ]
 
   return (
     <div className='divtongquan_container'>
@@ -43,21 +66,14 @@ function MangluoiLayout () {
               />
             </div>
           </div>
-          <div>
-            <table className='rebate-table'>
-              <thead>
-                <tr>
-                  <th>Tên người dùng - Cấp độ</th>
-                  <th>Hoa hồng</th>
-                  <th>Doanh số cá nhân</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colSpan={3}>không có dữ liệu</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className='table-history'>
+            <Table
+              dataSource={data}
+              columns={columns}
+              pagination={false}
+              rowKey='time'
+              scroll={{ x: 'max-content' }}
+            />
           </div>
         </div>
       </div>
