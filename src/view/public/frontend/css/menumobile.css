@@ -1,0 +1,126 @@
+.list-tab-category-mobile .slick-arrow.slick-next {
+  right: 0;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 0 11px 5px;
+  border-color: transparent transparent transparent #007bff;
+}
+
+.list-tab-category-mobile .slick-arrow.slick-next:before {
+  content: '';
+}
+
+.list-tab-category-mobile .slick-arrow.slick-prev {
+  left: 0;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 11px 5px 11px 0;
+  border-color: transparent #007bff transparent transparent;
+}
+
+.list-tab-category-mobile .slick-arrow.slick-prev:before {
+  content: '';
+}
+
+.box-item-category-track {
+  display: flex !important;
+  justify-content: center;
+}
+
+.item-category-game-mobile {
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 59px;
+  --tw-text-opacity: 1;
+  color: rgb(63 79 117 / var(--tw-text-opacity, 1));
+  background: url(/public/btn.58c2e5b64c9ca9c3.png) no-repeat top / cover;
+  vertical-align: top;
+}
+
+.item-category-game-mobile img {
+  width: 40px;
+  height: 30px;
+  background-size: cover;
+  object-fit: cover;
+  background-position: 26px 30px;
+}
+
+.item-category-game-mobile {
+  text-align: center;
+  display: inline-flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px !important;
+  height: 59px;
+  --tw-text-opacity: 1;
+  color: rgb(63 79 117 / var(--tw-text-opacity, 1));
+  background: url(/public/btn.58c2e5b64c9ca9c3.png) no-repeat top / cover;
+  vertical-align: top;
+}
+
+.item-category-game-mobile img {
+  width: 40px;
+  height: 30px;
+  background-size: cover;
+  object-fit: cover;
+  background-position: 26px 30px;
+}
+
+.image-icon-category-mobile {
+  width: 40px;
+  height: 30px;
+  background: url(/public/sport.97ee2afae78be1b8.png) no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.item-category-game-mobile p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-height: 10px;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 11px;
+  text-transform: capitalize;
+  padding-bottom: 0px;
+  color: #3a5177;
+  margin-top: 3px;
+}
+
+.item-category-game-mobile a {
+  display: inline-block;
+  text-align: center;
+}
+
+.menu_active {
+  --tw-text-opacity: 1;
+  color: white !important;
+  background-position: bottom;
+}
+
+.menu_active p {
+  color: white !important;
+}
+
+.icon-menu-active {
+  background-position: bottom;
+}
+@media screen and (max-width: 990px) {
+  .list-tab-category-mobile {
+    padding-bottom: 15px;
+  }
+}

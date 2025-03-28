@@ -1,0 +1,59 @@
+.div_name_game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  padding: 20px 0 50px;
+}
+
+.div_name_game::before,
+.div_name_game::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 341px;
+  height: 33px;
+  background: url('../../../../../public/name_game_left.png');
+}
+
+.div_name_game::after {
+  background: url('../../../../../public//name_game_side.png') !important;
+}
+
+.name_game h2 {
+  margin-top: 0;
+  padding-top: 10px;
+  text-align: center;
+  text-shadow: 1.7px 2.5px 4.4px rgba(77, 157, 251, 0.25);
+  text-transform: uppercase;
+  font-family: 'UTMAvo-bold';
+  font-size: 40px;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+}
+
+.name_game span {
+  display: block;
+  margin: 7px 0 0;
+  color: #8792aa;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  .div_name_game {
+    justify-content: unset !important;
+  }
+  .div_name_game::before,
+  .div_name_game::after {
+    content: none;
+    display: none;
+  }
+
+  .name_game span {
+    white-space: pre-wrap !important;
+  }
+}

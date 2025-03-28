@@ -1,0 +1,158 @@
+.signInpassNext {
+    width: 634px;
+    height: auto;
+    margin-top: 50px;
+    background: url(/public/f2be69da589e3c9600c5389e92662625.png) no-repeat center top;
+    background-size: cover;
+    border-radius: 48px;
+    transition: transform 0.3s ease-out;
+    margin: 30px auto;
+    position: absolute;
+    padding: 28px 59px;
+    color: #404040;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.box-sign-in {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.logoImages img {
+    height: 118px;
+}
+
+.Item-form-resgeter input {
+    width: 100%;
+    height: 100%;
+    padding: 0 6rem 0px 6rem;
+    color: #9499b6;
+    font-size: 16px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    height: 53px;
+    background: #e8f0ff;
+    border-radius: 10px;
+}
+
+.Item-form-resgeter label {
+    margin: 0;
+    font-size: 20px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.Item-form-resgeter {margin-bottom: 20px;}
+
+.logoImages {
+    margin-bottom: 20px;
+}
+
+button.btn-submit-sigin {
+    width: 200px;
+    height: 62px;
+    color: #fff;
+    font-size: 20px;
+    border: 0;
+    background: url(/public/fa25f9adab34bc0a211ee91a2b5ac187.png) no-repeat center / contain;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.btn-next-signup span {
+    margin: 16px 0 0;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn-next-signup span a {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, #359eff 33%, #1f79ff);
+}
+.bg-ovflow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    outline: 0;
+    background: #0000006b;
+}
+
+.item-flex-resgeter {
+    position: relative;
+}
+
+.item-flex-resgeter img {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+.close-form {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 32px;
+    height: 32px;
+    background: url(/public/6a7a88e7a6926c5325fe94d62d24da94.png) no-repeat center top;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+@media(max-width:990px){
+
+.close-form {
+    top: 5px;
+    right: 5px;
+}
+    .signInpassNext {
+        width: 100%;
+        height: 100vh;
+        margin: unset;
+        background: url(/public/bg.973a81f3e14f0b68.png) no-repeat center top;
+        border-radius: unset;
+        padding: 15px 20px;
+    }
+    
+    .Item-form-resgeter label {
+        font-size: 16px;
+    }
+    
+    .Item-form-resgeter input {
+        background: #fff;
+        border: 1px solid #359eff;
+        height: 44px;
+    }
+    
+    button.btn-submit-sigin {
+        font-size: 17px;
+        width: 170px;
+        height: 53px;
+    }
+    
+    .btn-next-signup span {
+        font-size: 16px;
+    }
+}

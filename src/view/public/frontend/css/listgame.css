@@ -1,0 +1,209 @@
+.div_game_tong {
+  background-color: white;
+}
+
+.div_game {
+  position: relative;
+  margin: 0 auto;
+}
+
+.game_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.game_header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    to bottom,
+    #359eff 48%,
+    #1f79ff 82%
+  ); /* Gradient tuyến tính */
+}
+
+.game_section_title {
+  font-size: 16px;
+  color: #fafafa;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-image: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+  padding: 5px;
+}
+
+.game_section_more {
+  font-size: 16px;
+  text-shadow: 1.7px 2.5px 4.4px rgba(77, 157, 251, 0.25);
+  cursor: pointer;
+  background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.game_card {
+  position: relative;
+  width: 200px !important;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Thêm wrapper để chứa hình ảnh và lớp phủ */
+.game_card_wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.game_thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease; /* Hiệu ứng làm mờ mượt mà */
+}
+
+/* Lớp phủ */
+.game_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ màu đen mờ */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Ẩn mặc định */
+  transition: opacity 0.3s ease; /* Hiệu ứng hiển thị mượt mà */
+}
+
+.play_button {
+  background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Khi hover vào game_card */
+.game_card:hover .game_overlay {
+  opacity: 1; /* Hiển thị lớp phủ */
+}
+
+.game_card:hover .game_thumbnail {
+  filter: brightness(50%); /* Làm mờ hình ảnh khi hover */
+}
+
+.game_info {
+  margin-top: 10px;
+}
+
+.game_title {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.game_provider {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+.game_company {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+.game_favorite {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.carousel_arrow {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff6200;
+  z-index: 1;
+}
+
+.left_arrow {
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right_arrow {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel_dots {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.carousel_dots .slick-active .dot {
+  background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 50px !important;
+  background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.slick-prev {
+  left: -50px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .div_game_card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .game_header {
+    padding-right: 10px;
+  }
+}
