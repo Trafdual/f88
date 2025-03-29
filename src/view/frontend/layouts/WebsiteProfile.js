@@ -35,7 +35,7 @@ const WebsiteProfile = () => {
       )}
 
       <div>
-        <Footer login={() => setPopup('login')} />
+        <div login={() => setPopup('login')} />
         <FooterPage />
       </div>
     </div>
