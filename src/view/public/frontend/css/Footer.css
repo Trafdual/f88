@@ -121,6 +121,10 @@ span.show-footer-top {
 }
 
 @media (max-width: 990px) {
+  footer {
+    padding-bottom: 7rem;
+  }
+
   .list-category-footers {
     display: none;
   }
@@ -144,13 +148,10 @@ span.show-footer-top {
     height: 28px;
     margin: 0px auto;
   }
-  .icon-menu-fixed-footer-active {
-    background-position: bottom;
-  }
-
   .list-menu-entire-fixed ul li .icon-menu-fixed-footer:nth-child(1) {
     background: url(/public/home.7374acd12c1c4dd4.png);
     background-size: cover;
+    background-position: bottom;
     width: 28px;
     height: 28px;
     margin: 0px auto;

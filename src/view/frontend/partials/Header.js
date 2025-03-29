@@ -185,7 +185,14 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                               </Link>
                             </li>
                             <li>
-                              <a href='/' data-discover='true'>
+                              <a
+                                onClick={e => {
+                                  e.preventDefault()
+                                  sessionStorage.removeItem('dangnhap')
+                                  window.location.href = '/'
+                                }}
+                                data-discover='true'
+                              >
                                 Đăng xuất
                               </a>
                             </li>

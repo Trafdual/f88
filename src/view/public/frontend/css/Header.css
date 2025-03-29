@@ -426,6 +426,10 @@ li.Tkweb {
 .avarat-name-active.active .action-box-profile {
   display: block;
 }
+.icon-mail {
+  display: none;
+}
+
 @media (max-width: 990px) {
   .icon-mail a img {
     width: 30px;
