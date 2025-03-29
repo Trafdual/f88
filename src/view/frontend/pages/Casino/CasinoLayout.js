@@ -25,7 +25,7 @@ function CasinoLayout () {
     { name: 'AG Asia', img: '/agassia.webp' },
     { name: 'Evolution', img: '/evolution.webp' },
     { name: 'SA Gaming', img: '/sagaming.webp' },
-    { name: 'WM Casino', img: '/wmcasino.webp' },
+    { name: 'WM Casino', img: '/1e33aab34776468f825b71a279b369f5.png' },
     { name: 'Dream Gaming', img: '/dreamgaming.webp' }
   ]
 

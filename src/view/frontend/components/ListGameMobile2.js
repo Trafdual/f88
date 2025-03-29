@@ -5,10 +5,6 @@ function ListGameMobile2 ({ list }) {
   return (
     <div className='div_game_tong'>
       <div className='div_game'>
-        <div className='game_header'>
-          <span className='game_section_title'>Giới Thiệu Trò Chơi</span>
-          <span className='game_section_more'>Nhiều Trò Chơi Hơn</span>
-        </div>
         <div className='div_game_card'>
           {list.map((item, index) => (
             <a href='#'>

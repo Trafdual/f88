@@ -8,6 +8,7 @@ import ListGame from "../../components/ListGame";
 import ListGameMobile2 from "../../components/ListGameMobile2";
 import MenuMobile from "../../components/MenuMobile";
 import Banner from "../../components/Banner";
+import GamePartListCasinoGreat from "../../components/ListGameCasinoAndGreat";
 
 function TheThaoMobile() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -34,18 +35,14 @@ function TheThaoMobile() {
       <NewsNotification />
       {isMobile && <MenuMobile />}
       <div className="div_name_game_tong">
-        <NameGame
-          name={"Thể Thao"}
-          title={
-            "Tổng hợp các nhà cung cấp cá cược thể thao hàng đầu, tỉ lệ cược tốt nhất."
-          }
-        />
+       
         {isMobile ? (
-          <ListGameMobile2 list={thethao} />
+           <ListGameMobile2 list={thethao} />
         ) : (
           <ListGame list={thethao} />
         )}
       </div>
+      {isMobile && <GamePartListCasinoGreat />}
     </div>
   );
 }
