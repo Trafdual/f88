@@ -1,187 +1,185 @@
 .item-brand img {
-    display: block;
-    filter: contrast(0.5);
+  display: block;
+  filter: contrast(0.5);
 }
 
 .item-brand:hover img {
-    filter: unset;
+  filter: unset;
 }
 
 footer {
-    position: relative;
-    color: #878ea6;
-    background: #303442;
-    padding: 24px 0 12px;
+  position: relative;
+  color: #878ea6;
+  background: #303442;
+  padding: 24px 0 12px;
 }
 
 .footer-top {
-    width: 50%;
+  width: 50%;
 }
 
 .desc-footer-top span {
-    color: #fff;
-    margin: 17px 0 0;
-    line-height: 30px;
-    text-align: justify;
-    font-size: 14px;
+  color: #fff;
+  margin: 17px 0 0;
+  line-height: 30px;
+  text-align: justify;
+  font-size: 14px;
 }
 
-.desc-footer-top {text-align: justify;margin: 17px 0 0;}
+.desc-footer-top {
+  text-align: justify;
+  margin: 17px 0 0;
+}
 
 span.show-footer-top {
-    color: #ffd94f;
-    text-decoration: underline;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-left: 3px;
+  color: #ffd94f;
+  text-decoration: underline;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 3px;
 }
 
 .list-brand-footer {
-    margin: 15px 0 17px;
+  margin: 15px 0 17px;
 }
 
-
 .box-category-footers ul {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    gap: 29px;
-    margin: 0;
-    padding: 20px 0;
-    text-align: center;
-    text-transform: capitalize;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 29px;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .box-category-footers ul:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 2px;
-    box-shadow: 0 0.5px 1px 0 rgba(255, 255, 255, 0.25);
-    background-color: #252733;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 0.5px 1px 0 rgba(255, 255, 255, 0.25);
+  background-color: #252733;
 }
 
 .box-category-footers ul li {
-    position: relative;
-    font-size: 17px;
-    line-height: 1.5;
-    list-style: none;
+  position: relative;
+  font-size: 17px;
+  line-height: 1.5;
+  list-style: none;
 }
 
 .box-category-footers ul li a {
-    color: #878ea6;
-    text-decoration: none;
+  color: #878ea6;
+  text-decoration: none;
 }
 
 .box-category-footers ul li:before {
-    content: '';
-    position: absolute;
-    left: -17px;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 1px;
-    height: 23px;
-    background: #878ea6;
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 1px;
+  height: 23px;
+  background: #878ea6;
 }
 
 .box-category-footers ul li:nth-child(1):before {
-    content: "";
-    background: none;
-    width: unset;
-    transform: unset;
+  content: '';
+  background: none;
+  width: unset;
+  transform: unset;
 }
 .coppy-right-footer {
-    height: 40px;
-    line-height: 40px;
-    margin: 0;
-    padding: 0;
-    color: #878ea6;
-    font-size: 16px;
-    text-align: center;
+  height: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 0;
+  color: #878ea6;
+  font-size: 16px;
+  text-align: center;
 }
 .list-menu-entire-fixed {
-    display: block;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #fff;
-    width: 100%;
-    position: fixed;
-    z-index: 9;
-    bottom: 0;
-    border-radius: 10px 10px 0px 0px;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
+  border-radius: 10px 10px 0px 0px;
 }
 
-
 .list-menu-entire-fixed {
+  display: none;
+}
+
+@media (max-width: 990px) {
+  .list-category-footers {
     display: none;
-}
+  }
 
+  .footer-top {
+    width: 100%;
+  }
 
-@media(max-width:990px){
-    .list-category-footers {
-        display: none;
-    }
-    
-    .footer-top {
-        width: 100%;
-    }
-    
-    .list-menu-entire-fixed {
-        display: block;
-    }
-.list-menu-entire-fixed ul {
+  .list-menu-entire-fixed {
+    display: block;
+  }
+  .list-menu-entire-fixed ul {
     display: flex;
     justify-content: space-between;
     padding: 7px 10px 5px;
-}
-.list-menu-entire-fixed ul li .icon-menu-fixed-footer{
+  }
+  .list-menu-entire-fixed ul li .icon-menu-fixed-footer {
     background-size: cover !important;
     background-position: bottom;
     width: 28px;
     height: 28px;
     margin: 0px auto;
-}
-.list-menu-entire-fixed ul li .icon-menu-fixed-footer:nth-child(1) {
+  }
+  .icon-menu-fixed-footer-active {
+    background-position: bottom;
+  }
+
+  .list-menu-entire-fixed ul li .icon-menu-fixed-footer:nth-child(1) {
     background: url(/public/home.7374acd12c1c4dd4.png);
     background-size: cover;
-    background-position: bottom;
     width: 28px;
     height: 28px;
     margin: 0px auto;
-}
-.list-menu-entire-fixed ul li:nth-child(2) .icon-menu-fixed-footer {
+  }
+  .list-menu-entire-fixed ul li:nth-child(2) .icon-menu-fixed-footer {
     background: url(/public/discount.fea535136cfe5f76.png);
-   
-}
-.list-menu-entire-fixed ul li:nth-child(3) .icon-menu-fixed-footer {
+  }
+  .list-menu-entire-fixed ul li:nth-child(3) .icon-menu-fixed-footer {
     background: url(/public/promotion.edbb651b5c040135.png);
-   
-}
-.list-menu-entire-fixed ul li:nth-child(4) .icon-menu-fixed-footer {
+  }
+  .list-menu-entire-fixed ul li:nth-child(4) .icon-menu-fixed-footer {
     background: url(/public/chat.71373317b9c5ee09.png);
-   
-}
-.list-menu-entire-fixed ul li:nth-child(5) .icon-menu-fixed-footer {
+  }
+  .list-menu-entire-fixed ul li:nth-child(5) .icon-menu-fixed-footer {
     background: url(/public/member.90389ebc6da952bd.png);
-   
-}
+  }
 
-.list-menu-entire-fixed ul li a {
+  .list-menu-entire-fixed ul li a {
     font-size: 10px;
     text-align: center;
     display: inline-block;
     color: #3b90ff;
-}
+  }
 
-.item-banner img {
+  .item-banner img {
     height: unset;
-}
+  }
 
-
-.banner-pages .slick-dots {
+  .banner-pages .slick-dots {
     display: none !important;
-}
+  }
 }

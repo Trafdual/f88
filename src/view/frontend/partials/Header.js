@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 const Header = ({ onLoginClick, onSignupClick }) => {
   const showSuccessBox = sessionStorage.getItem('dangnhap')
+  const location = useLocation()
+  const locationpath = location.pathname
   const [isActive, setIsActive] = useState(false)
   const [time, setTime] = useState(new Date())
   const navigate = useNavigate()
@@ -148,14 +150,14 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   <div className='Box-signin-sucecs'>
                     <ul>
                       <li>
-                        <Link to='/WebsiteProfile'>
+                        <Link to='/WebsiteProfile/Deposit'>
                           <img src='/icon1.png' alt='' />
                           <span>Nạp tiền</span>
                         </Link>
                       </li>
 
                       <li>
-                        <Link to='/WebsiteProfile'>
+                        <Link to='/WebsiteProfile/withdrawApplication'>
                           <img
                             src='/b04f2d4b96137eb35597bca4b4ab3a5a.png'
                             alt=''
@@ -241,11 +243,19 @@ const Header = ({ onLoginClick, onSignupClick }) => {
           <div className='box-header-bottom-bar'>
             <div className='list-tab-header-menu'>
               <ul>
-                <li>
+                <li
+                  className={
+                    locationpath === '/' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/'>Trang Chủ</Link>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/thethao' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/thethao'>Thể thao</Link>
 
                   <div className='menu-c2-desk'>
@@ -263,7 +273,11 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/casino' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/casino'>Casino</Link>
 
                   <div className='menu-c2-desk'>
@@ -281,7 +295,11 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/nohu' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/nohu'>Nổ hũ</Link>
 
                   <div className='menu-c2-desk'>
@@ -299,7 +317,11 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/banca' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/banca'>Bắn cá</Link>
                   <div className='menu-c2-desk'>
                     <div className='ctnr'>
@@ -316,8 +338,17 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
-                  <a onClick={e => handleLoginClick(e)} style={{cursor:'pointer'}}>Hoa hồng</a>
+                <li
+                  className={
+                    locationpath === '/hoahong' ? 'tab-header-menu-active' : ''
+                  }
+                >
+                  <a
+                    onClick={e => handleLoginClick(e)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    Hoa hồng
+                  </a>
                 </li>
               </ul>
             </div>

@@ -1,14 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const FooterFixed = () => {
+  const location = useLocation()
+  const activeLink = location.pathname
   return (
     <div>
       <div className='list-menu-entire-fixed'>
         <ul>
           <li>
             <Link to='/'>
-              <div className='icon-menu-fixed-footer'></div>
+              <div
+                className={
+                  activeLink === '/'
+                    ? 'icon-menu-fixed-footer icon-menu-fixed-footer-active'
+                    : 'icon-menu-fixed-footer'
+                }
+              ></div>
               Trang chủ
             </Link>
           </li>
@@ -32,7 +40,13 @@ const FooterFixed = () => {
           </li>
           <li>
             <Link to='/LayoutProfileMobile'>
-              <div className='icon-menu-fixed-footer'></div>
+              <div
+                className={
+                  activeLink === '/LayoutProfileMobile'
+                    ? 'icon-menu-fixed-footer icon-menu-fixed-footer-active'
+                    : 'icon-menu-fixed-footer'
+                }
+              ></div>
               Tài khoản
             </Link>
           </li>

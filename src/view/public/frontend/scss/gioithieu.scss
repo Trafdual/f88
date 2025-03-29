@@ -37,9 +37,9 @@
   button {
     width: 400px;
     font-size: 16px;
-    background-color: #89eb34;
+    background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
     border: none;
-    color: var(--title-color);
+    color: #fff;
     border-radius: 10px;
     padding: 15px;
   }
@@ -78,6 +78,9 @@
     cursor: pointer;
     font-size: 16px;
     line-height: 20px;
-    color: #89eb34;
+    background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
