@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const Deposit = () => {
   const [activeTab, setActiveTab] = useState('1')
   const [selected, setSelected] = useState({
@@ -20,9 +23,9 @@ const Deposit = () => {
   }
 
   const handleChange = e => {
-    let value = e.target.value.replace(/,/g, '') 
+    let value = e.target.value.replace(/,/g, '')
     if (!isNaN(value) && value !== '') {
-      setsottien(formatCurrency(value)) 
+      setsottien(formatCurrency(value))
     } else {
       setsottien('')
     }
@@ -69,8 +72,19 @@ const Deposit = () => {
     }
   ]
 
+  const handleCopy = text => {
+    navigator.clipboard.writeText(text).then(() => {
+      toast.success('Sao chép thành công!', {
+        position: 'top-right',
+        autoClose: 3000
+      })
+    })
+  }
+
   return (
     <div className='member-depoin'>
+      <ToastContainer position='top-right' autoClose={3000} />
+
       <div className='box-tab-depoin'>
         <h4>Phương thức nạp:</h4>
         <div className='tab-buttons'>
@@ -231,7 +245,12 @@ const Deposit = () => {
                 <span>Địa chỉ ví USDT-BEP20:</span>
                 <div class='divlinklienketvi'>
                   <span>0xde9ef1a6224f528e515e7ee6d7002eccc5fb9b65</span>
-                  <div>
+                  <div
+                    onClick={() =>
+                      handleCopy('0xde9ef1a6224f528e515e7ee6d7002eccc5fb9b65')
+                    }
+                    style={{cursor: 'pointer'}}
+                  >
                     <svg
                       stroke='currentColor'
                       fill='currentColor'

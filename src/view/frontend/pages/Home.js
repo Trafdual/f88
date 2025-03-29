@@ -1,33 +1,55 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import NewsNotification from '../components/NewsNotification'
 import Banner from '../components/Banner'
 import MenuMobile from '../components/MenuMobile'
+import BoxSigninSucecs from '../components/BoxSigninSucecs'
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0)
+  const navigate = useNavigate()
+  const [DangNhapStatus, setDangNhapStatus] = useState(
+    sessionStorage.getItem('dangnhap')
+  )
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setDangNhapStatus(sessionStorage.getItem('dangnhap'))
+    }
+
+    window.addEventListener('storage', handleStorageChange)
+
+    setDangNhapStatus(sessionStorage.getItem('dangnhap'))
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange)
+    }
+  }, [])
 
   const sportsData = [
     {
-      title: 'Bóng đá',
+      title: 'Thể thao',
       activeIcon: '/8766bc81d6662f03435338389ad19c54.png',
       defaultIcon: '/c67e44b68bec655d30317e2e8be4ffeb.png',
       avatar: '/a20e6d46b4128709986d3acb72f04154.png',
-      buttonImg: '/aef367df7a75124e3ccebad241bc4984.png'
+      buttonImg: '/aef367df7a75124e3ccebad241bc4984.png',
+      link: '/thethao'
     },
     {
       title: 'Casino',
       activeIcon: '/8766bc81d6662f03435338389ad19c54.png',
       defaultIcon: '/c67e44b68bec655d30317e2e8be4ffeb.png',
       avatar: '/7617d0d88f6254ff737f03e4bca075cf.png  ',
-      buttonImg: '/aef367df7a75124e3ccebad241bc4984.png'
+      buttonImg: '/aef367df7a75124e3ccebad241bc4984.png',
+      link: '/casino'
     },
     {
       title: 'Nổ Hũ',
       activeIcon: '/8766bc81d6662f03435338389ad19c54.png',
       defaultIcon: '/c67e44b68bec655d30317e2e8be4ffeb.png',
       avatar: '/6219b39e4ee470a1870b6da02ab5d0c4.png',
-      buttonImg: '/aef367df7a75124e3ccebad241bc4984.png'
+      buttonImg: '/aef367df7a75124e3ccebad241bc4984.png',
+      link: '/nohu'
     }
   ]
 
@@ -75,7 +97,7 @@ const Home = () => {
                     </div>
 
                     <div className='btn-lobby-sport'>
-                      <button>
+                      <button onClick={() => navigate(sport.link)}>
                         Chơi ngay
                         <img src={sport.buttonImg} alt='button-img' />
                       </button>
@@ -182,6 +204,20 @@ const Home = () => {
         <div className='ctnr'>
           <MenuMobile />
 
+          {DangNhapStatus && (
+            <div className='box-login-sigin-respert'>
+              <div class='member-name-login'>
+                <div className='singin-name'>
+                  <p> Bao10122003 </p>
+                  <span>0</span>
+                </div>
+              </div>
+              <div className='box-member-right-login'>
+                <BoxSigninSucecs />
+              </div>
+            </div>
+          )}
+
           <div className='game-part-list'>
             <div className='row'>
               <div
@@ -189,7 +225,7 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link>
+                  <Link to='/thethaomobile'>
                     <img src='/ICONTT.a6397ad290b8d7b609f6.png' alt='' />
                     <span>Thể Thao</span>
                   </Link>
@@ -201,7 +237,7 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link>
+                  <Link to='casino'>
                     <img src='/ICONCASINO.c43a0fd18f4d128a6f8c.png' alt='' />
                     <span>Casino</span>
                   </Link>
@@ -212,7 +248,7 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link>
+                  <Link to='/banca'>
                     <img src='/ICONBANCA.94f75c355a1e4c092627.png  ' alt='' />
                     <span>Bắn Cá</span>
                   </Link>
@@ -223,7 +259,7 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link>
+                  <Link to='/nohu'>
                     <img src='/ICONSLOT.00fe6ed1eadc0116578a.png' alt='' />
                     <span>Slot</span>
                   </Link>
@@ -235,7 +271,7 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link>
+                  <Link to='/daga'>
                     <img src='/ICONDAGA.8c269ccc0d1aa8033ac8.png' alt='' />
                     <span>Đá Gà</span>
                   </Link>

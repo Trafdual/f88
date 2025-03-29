@@ -24,7 +24,16 @@ function BanCaLayout () {
 
   return (
     <div className='div_thethao_page'>
-      {isMobile ? <div></div> : <div className='banner_game'></div>}
+      {isMobile ? (
+        <div></div>
+      ) : (
+        <div
+          className='banner_game'
+          style={{
+            backgroundImage: "url('/bannerbanca.jfif')"
+          }}
+        ></div>
+      )}
       <NewsNotification />
       {isMobile && <MenuMobile />}
       <div className='div_name_game_tong'>

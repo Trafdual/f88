@@ -31,7 +31,16 @@ function CasinoLayout () {
 
   return (
     <div className='div_thethao_page'>
-      {isMobile ? <div></div> : <div className='banner_game'></div>}
+      {isMobile ? (
+        <div></div>
+      ) : (
+        <div
+          className='banner_game'
+          style={{
+            backgroundImage: "url('/bannergame.jfif')"
+          }}
+        ></div>
+      )}
       <NewsNotification />
       {isMobile && <MenuMobile />}
 

@@ -34,13 +34,16 @@
     height: 2px;
     position: absolute;
     transition: width 0.3s;
-    background-color: #89eb34;
+    background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
   }
 }
 
 .tab_item_active {
   font-weight: 600;
-  color: #89eb34 !important;
+  background: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   ::after {
     width: calc(100% - 15px);

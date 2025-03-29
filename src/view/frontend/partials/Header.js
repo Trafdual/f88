@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import BoxSigninSucecs from '../components/BoxSigninSucecs'
 
 const Header = ({ onLoginClick, onSignupClick }) => {
   const showSuccessBox = sessionStorage.getItem('dangnhap')
+  const location = useLocation()
+  const locationpath = location.pathname
   const [isActive, setIsActive] = useState(false)
   const [time, setTime] = useState(new Date())
   const navigate = useNavigate()
@@ -118,7 +121,7 @@ const Header = ({ onLoginClick, onSignupClick }) => {
 
             <div className='box-header-right-top'>
               <div className='settime-auto-header'>
-                <p>{time.toLocaleString()}</p>
+                <p>{new Date().toLocaleString()}</p>
               </div>
               <div className='box-nav-desk-header-top'>
                 <ul class='box-no-active-sigin'>
@@ -145,72 +148,56 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                 </ul>
 
                 {showSuccessBox && (
-                  <div className='Box-signin-sucecs'>
-                    <ul>
-                      <li>
-                        <Link to='/WebsiteProfile'>
-                          <img src='/icon1.png' alt='' />
-                          <span>Nạp tiền</span>
-                        </Link>
-                      </li>
-
-                      <li>
-                        <Link to='/WebsiteProfile'>
-                          <img
-                            src='/b04f2d4b96137eb35597bca4b4ab3a5a.png'
-                            alt=''
-                          />
-                          <span>Rút tiền</span>
-                        </Link>
-                      </li>
-
-                      <li>
-                        <Link to='/WebsiteProfile'>
-                          <img
-                            src='/3a63139307f5f1c83e9dba580f017d4c.png'
-                            alt=''
-                          />
-                          <span>VIP</span>
-                        </Link>
-                      </li>
-                    </ul>
-
-                    <div className='singin-name'>
-                      <p> Bao10122003 </p>
-                      <span>0</span>
+                  <div className='box-container-show'>
+                    <div className='icon-mail'>
+                      <Link>
+                        <img src='/event.61266ed1c0cb87a0.png' alt='' />
+                      </Link>
                     </div>
 
-                    <div
-                      className={`avarat-name-active ${
-                        isActive ? 'active' : ''
-                      }`}
-                    >
-                      <div className='avatar-tion-name' onClick={toggleActive}>
-                        <img
-                          alt=''
-                          src='https://gwfd.qatgwawm.net/system-requirement/Web.PortalNew/UK255-01/99cdae96e2/images/ea89097590e2197a90c2f5d3974eae55.png'
-                        />
+                    <div className='Box-signin-sucecs'>
+                      <BoxSigninSucecs />
+
+                      <div className='singin-name'>
+                        <p> Bao10122003 </p>
+                        <span>0</span>
                       </div>
-                      <div className='action-box-profile'>
-                        <ul>
-                          <li className='Tkweb'>
-                            <Link to='/WebsiteProfile' className='item-tk'>
-                              Thông tin tài khoản
-                            </Link>
-                          </li>
-                          <li>
-                            <a
-                              onClick={e => {
-                                e.preventDefault()
-                                sessionStorage.removeItem('dangnhap')
-                                window.location.href = '/'
-                              }}
-                              data-discover='true'
-                            >
-                              Đăng xuất
-                            </a>
-                          </li>
-                        </ul>
+
+                      <div
+                        className={`avarat-name-active ${
+                          isActive ? 'active' : ''
+                        }`}
+                      >
+                        <div
+                          className='avatar-tion-name'
+                          onClick={toggleActive}
+                        >
+                          <img
+                            alt=''
+                            src='https://gwfd.qatgwawm.net/system-requirement/Web.PortalNew/UK255-01/99cdae96e2/images/ea89097590e2197a90c2f5d3974eae55.png'
+                          />
+                        </div>
+                        <div className='action-box-profile'>
+                          <ul>
+                            <li className='Tkweb'>
+                              <Link to='/WebsiteProfile' className='item-tk'>
+                                Thông tin tài khoản
+                              </Link>
+                            </li>
+                            <li>
+                              <a
+                                onClick={e => {
+                                  e.preventDefault()
+                                  sessionStorage.removeItem('dangnhap')
+                                  window.location.href = '/'
+                                }}
+                                data-discover='true'
+                              >
+                                Đăng xuất
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -241,11 +228,19 @@ const Header = ({ onLoginClick, onSignupClick }) => {
           <div className='box-header-bottom-bar'>
             <div className='list-tab-header-menu'>
               <ul>
-                <li>
+                <li
+                  className={
+                    locationpath === '/' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/'>Trang Chủ</Link>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/thethao' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/thethao'>Thể thao</Link>
 
                   <div className='menu-c2-desk'>
@@ -263,7 +258,11 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/casino' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/casino'>Casino</Link>
 
                   <div className='menu-c2-desk'>
@@ -281,7 +280,11 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/nohu' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/nohu'>Nổ hũ</Link>
 
                   <div className='menu-c2-desk'>
@@ -299,7 +302,11 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
+                <li
+                  className={
+                    locationpath === '/banca' ? 'tab-header-menu-active' : ''
+                  }
+                >
                   <Link to='/banca'>Bắn cá</Link>
                   <div className='menu-c2-desk'>
                     <div className='ctnr'>
@@ -316,8 +323,17 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                   </div>
                 </li>
 
-                <li>
-                  <a onClick={e => handleLoginClick(e)} style={{cursor:'pointer'}}>Hoa hồng</a>
+                <li
+                  className={
+                    locationpath === '/hoahong' ? 'tab-header-menu-active' : ''
+                  }
+                >
+                  <a
+                    onClick={e => handleLoginClick(e)}
+                    style={{ cursor: 'pointer' }}
+                  >
+                    Hoa hồng
+                  </a>
                 </li>
               </ul>
             </div>
