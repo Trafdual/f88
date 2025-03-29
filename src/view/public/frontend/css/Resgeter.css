@@ -127,7 +127,7 @@ button.btn-submit-sigin {
 
 @media (max-width: 990px) {
   .close-form {
-    top: 30px;
+    top: 60px;
     right: 5px;
   }
   .signInpassNext {
