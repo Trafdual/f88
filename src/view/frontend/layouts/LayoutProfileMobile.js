@@ -28,9 +28,8 @@ const LayoutProfileMobile = () => {
       )}
 
       <Outlet />
-      
-        <Footer login={() => setPopup('login')}></Footer>
-      
+
+      <Footer login={() => setPopup('login')}></Footer>
     </div>
   )
 }

@@ -4,7 +4,6 @@ import Silbar from '../pages/Profile/Silbar'
 import Banner from '../components/Banner'
 import NewsNotification from '../components/NewsNotification'
 import Header from '../partials/Header'
-import Footer from '../partials/Footer'
 import Login from '../pages/Login'
 import FooterPage from '../partials/FooterPage'
 
@@ -35,8 +34,7 @@ const WebsiteProfile = () => {
       )}
 
       <div>
-        <div login={() => setPopup('login')} />
-        <FooterPage />
+        <FooterPage login={() => setPopup('login')}/>
       </div>
     </div>
   )

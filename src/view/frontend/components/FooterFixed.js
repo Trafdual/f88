@@ -13,8 +13,7 @@ const FooterFixed = ({ login }) => {
     if (dangnhapstatus) {
       navigate('/LayoutProfileMobile')
     } else {
-      navigate('/login')
-      console.log('ádasdasd')
+      login()
     }
   }
 

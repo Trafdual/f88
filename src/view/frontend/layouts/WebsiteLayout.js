@@ -6,7 +6,6 @@ import Register from '../pages/Register'
 
 // Partials
 import Header from '../partials/Header'
-import Footer from '../partials/Footer'
 
 // CSS
 import '../../public/frontend/css/utilities.css'
@@ -43,8 +42,7 @@ const WebsiteLayout = () => {
 
       <Outlet />
       <div>
-        <div login={() => setPopup('login')} />
-        <FooterPage />
+        <FooterPage login={() => setPopup('login')}/>
       </div>
     </div>
   )

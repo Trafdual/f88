@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FooterFixed from "../components/FooterFixed";
 
-const FooterPage = () => {
+const FooterPage = ({login}) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const settings = {
     dots: false,
@@ -60,7 +60,7 @@ const FooterPage = () => {
 
   return (
     <footer>
-      <FooterFixed></FooterFixed>
+      <FooterFixed login={login}></FooterFixed>
       <div className="ctnr">
         <div className="footer-top">
           <div className="logo-footer">
