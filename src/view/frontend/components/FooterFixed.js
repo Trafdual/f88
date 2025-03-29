@@ -1,9 +1,22 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-const FooterFixed = () => {
+const FooterFixed = ({ login }) => {
+  const dangnhapstatus = sessionStorage.getItem('dangnhap')
   const location = useLocation()
   const activeLink = location.pathname
+  const navigate = useNavigate()
+
+  const handleLoginClick = event => {
+    event.preventDefault()
+    if (dangnhapstatus) {
+      navigate('/LayoutProfileMobile')
+    } else {
+      login()
+    }
+  }
+
   return (
     <div>
       <div className='list-menu-entire-fixed'>
@@ -39,7 +52,7 @@ const FooterFixed = () => {
             </Link>
           </li>
           <li>
-            <Link to='/LayoutProfileMobile'>
+            <a onClick={e => handleLoginClick(e)}>
               <div
                 className={
                   activeLink === '/LayoutProfileMobile'
@@ -48,7 +61,7 @@ const FooterFixed = () => {
                 }
               ></div>
               Tài khoản
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

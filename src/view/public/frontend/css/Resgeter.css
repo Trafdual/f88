@@ -127,7 +127,7 @@ button.btn-submit-sigin {
 
 @media (max-width: 990px) {
   .close-form {
-    top: 5px;
+    top: 25px;
     right: 5px;
   }
   .signInpassNext {
@@ -136,7 +136,7 @@ button.btn-submit-sigin {
     margin: unset;
     background: url(/public/bg.973a81f3e14f0b68.png) no-repeat center top;
     border-radius: unset;
-    padding: 40px 20px 0px;
+    padding: 55px 20px 0px;
   }
 
   .Item-form-resgeter label {
