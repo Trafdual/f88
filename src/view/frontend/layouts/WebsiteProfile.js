@@ -34,10 +34,10 @@ const WebsiteProfile = () => {
         />
       )}
 
-      <footer>
+      <div>
         <Footer login={() => setPopup('login')} />
         <FooterPage />
-      </footer>
+      </div>
     </div>
   )
 }

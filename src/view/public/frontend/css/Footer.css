@@ -2,12 +2,7 @@
   display: block;
   filter: contrast(0.5);
 }
-body{
-  display: block;
-  height: 100%;
-  background: url(/public/bgmobile.jpg) no-repeat center bottom;
-  background-size: contain;
-}
+
 .item-brand:hover img {
   filter: unset;
 }
@@ -143,7 +138,7 @@ span.show-footer-top {
 }
 @media (max-width: 990px) {
   footer {
-    padding-bottom: 30px;
+    padding-bottom: 57px;
   }
   .close-footer {
     display: block !important;
@@ -208,7 +203,12 @@ footer {
   .list-category-footers {
     display: none;
   }
-
+  body{
+    display: block;
+    height: 100%;
+    background: url(/public/bgmobile.jpg) no-repeat center bottom;
+    background-size: contain;
+  }
   .footer-top {
     width: 100%;
   }
