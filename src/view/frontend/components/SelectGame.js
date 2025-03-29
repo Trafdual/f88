@@ -1,6 +1,6 @@
 import '../../public/frontend/css/selectgame.css'
 
-function SelectGame ({ listdanhsach, selectedKey, setkey }) {
+function SelectGame ({ listdanhsach, selectedKey, setkey, setitem }) {
   return (
     <div className='div_selectgame_container'>
       <ul className='ul_select_game'>
@@ -8,7 +8,10 @@ function SelectGame ({ listdanhsach, selectedKey, setkey }) {
           <li
             className={selectedKey === list.key ? 'active' : ''}
             key={index}
-            onClick={() => setkey(list.key)}
+            onClick={() => {
+              setkey(list.key)
+              setitem(list.item)
+            }}
           >
             <figure>
               <img src={list.src} alt='' />

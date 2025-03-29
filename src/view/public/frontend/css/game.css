@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .div_game_container > img {
@@ -46,9 +47,60 @@
   line-height: 1;
 }
 
-.div_discount_game_container{
-    position: relative;
-    display: inline-block;
-    margin: 20px 0 24px;
+.div_discount_game_container {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0 24px;
+}
 
+.div_discount_game_container span {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 15px;
+  color: #0053df;
+  font-size: 19.4px;
+  font-weight: bold;
+}
+
+.ng_binding {
+  margin: 0 0 20px;
+  line-height: 1.5;
+  color: #3f4f75;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.div_game_container button {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 165px;
+  height: 60px;
+  padding: 0 0 10px;
+  margin: 24px 0 0;
+  text-transform: capitalize;
+  text-align: center;
+  border: none;
+  outline: none;
+  background: url('../../../../../public/logo/backbtn.png') no-repeat center /
+    contain;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+.div_game_container button span {
+  background-image: linear-gradient(to bottom, #359eff 25%, #1f79ff);
+  font-size: 20px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
 }
