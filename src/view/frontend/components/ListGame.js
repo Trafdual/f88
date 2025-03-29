@@ -27,7 +27,7 @@ function ListGame ({ list }) {
           </span>
         </div>
 
-        {list.length > 1 ? (
+        {list.length > 4 ? (
           <Slider {...sliderSettings}>
             {list.map((item, index) => (
               <div className='game_card' key={index}>
@@ -48,23 +48,25 @@ function ListGame ({ list }) {
             ))}
           </Slider>
         ) : (
-          list.map((item, index) => (
-            <div className='game_card' key={index}>
-              <div className='game_card_wrapper'>
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className='game_thumbnail'
-                />
-                <div className='game_overlay'>
-                  <button className='play_button'>Play</button>
+          <div className='div_game_card'>
+            {list.map((item, index) => (
+              <div className='game_card' key={index}>
+                <div className='game_card_wrapper'>
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className='game_thumbnail'
+                  />
+                  <div className='game_overlay'>
+                    <button className='play_button'>Play</button>
+                  </div>
+                </div>
+                <div className='game_info'>
+                  <span className='game_title'>{item.name}</span>
                 </div>
               </div>
-              <div className='game_info'>
-                <span className='game_title'>{item.name}</span>
-              </div>
-            </div>
-          ))
+            ))}
+          </div>
         )}
       </div>
     </div>

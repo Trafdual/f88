@@ -7,9 +7,18 @@ import 'slick-carousel/slick/slick-theme.css'
 import ListGame from '../../components/ListGame'
 import ListGameMobile from '../../components/ListGameMobile'
 import MenuMobile from '../../components/MenuMobile'
+import SelectGame from '../../components/SelectGame'
 
 function BanCaLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
+  const [key, setkey] = useState('cq9')
+
+  const [item, setitem] = useState([
+    { name: 'CQ9 Bắn cá một lần', img: '/cq9game/oneshot.png' },
+    { name: 'CQ9 Cá hoàng kim', img: '/cq9game/turnyou.png' },
+    { name: 'CQ9 Happy bắn cá', img: '/cq9game/luckyfish.png' }
+  ])
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,7 +29,17 @@ function BanCaLayout () {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const thethao = [{ name: 'CQ9', img: '/cq9gaming.webp' }]
+  const selectgame = [
+    {
+      src: '/logo/cq9logo.png',
+      key: 'cq9',
+      item: [
+        { name: 'CQ9 Bắn cá một lần', img: '/cq9game/oneshot.png' },
+        { name: 'CQ9 Cá hoàng kim', img: '/cq9game/turnyou.png' },
+        { name: 'CQ9 Happy bắn cá', img: '/cq9game/luckyfish.png' }
+      ]
+    }
+  ]
 
   return (
     <div className='div_thethao_page'>
@@ -41,11 +60,14 @@ function BanCaLayout () {
           name={'Bắn Cá'}
           title={'Giao diện đẹp mắt, Sống động từ nhiều nhà cung cấp hàng đầu.'}
         />
-        {isMobile ? (
-          <ListGameMobile list={thethao} />
-        ) : (
-          <ListGame list={thethao} />
-        )}
+        <SelectGame
+          listdanhsach={selectgame}
+          selectedKey={key}
+          setkey={setkey}
+          setitem={setitem}
+        />
+
+        {isMobile ? <ListGameMobile list={item} /> : <ListGame list={item} />}
       </div>
     </div>
   )
