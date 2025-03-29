@@ -67,33 +67,33 @@ const Header = ({ onLoginClick, onSignupClick }) => {
   })
 
   const images = [
-    '/aesexy.webp',
-    '/agassia.webp',
-    '/evolution.webp',
-    '/sagaming.webp',
-    '/wmcasino.webp',
-    '/dreamgaming.webp'
+    '/2a462fa8175041f72c01709c4da06270.png',
+    '/6c291942a8c7943a3b576fa298290c2b.png',
+    '/74c78befc7f6ef9ca02948f71da47ddf.png',
+    '/5512c441c831ff534b848191389627c8.png',
+    '/1e33aab34776468f825b71a279b369f5.png',
+    '/6396a755c3fdf08ebaa817fd49d3a6f3.png'
   ]
 
   const thethao = [
-    '/saba.webp',
-    '/bti.webp',
+    '/bcf41016c00ec4dcbeafeb57c2952851.png',
+    '/5b50dcce50d55a7d010397567285a195.png',
     '/panda.webp',
     '/afb.webp',
     '/cockfight.webp'
   ]
 
   const nohu = [
-    '/pramaticplay.webp',
-    '/cq9gaming.webp',
+    '/10821b0408d814200e7bec750acdd11e.png',
+    '/f38785044f48ab010e58e51ec0c15ece.png',
     '/microgaming.webp',
     '/tcgaming.webp',
     '/afbgaming.webp ',
-    '/jiligaming.webp',
+    '/97d91c5ffb137814745a9d0d1eac1a72.png',
     '/rich88.webp',
     '/baucua.webp'
   ]
-  const banca = ['/cq9gaming.webp']
+  const banca = ['/95bf10459b39c5423473f5281c8b2a61.png']
   return (
     <div className='box-header-all'>
       <header>

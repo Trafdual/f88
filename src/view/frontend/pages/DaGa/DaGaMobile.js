@@ -8,6 +8,7 @@ import ListGame from "../../components/ListGame";
 import ListGameMobile2 from "../../components/ListGameMobile2";
 import MenuMobile from "../../components/MenuMobile";
 import Banner from "../../components/Banner";
+import GamePartListCasinoGreat from "../../components/ListGameCasinoAndGreat";
 
 function DaGaMobile() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -32,18 +33,14 @@ function DaGaMobile() {
       <NewsNotification />
       {isMobile && <MenuMobile />}
       <div className="div_name_game_tong">
-      <NameGame
-          name={'Đá Gà'}
-          title={
-            'Đại chiến hùng kê với những trận đấu đỉnh cao, tỉ lệ kèo cực cao.'
-          }
-        />
         {isMobile ? (
           <ListGameMobile2 list={thethao} />
         ) : (
           <ListGame list={thethao} />
         )}
       </div>
+      {isMobile && <GamePartListCasinoGreat />}
+
     </div>
   );
 }
