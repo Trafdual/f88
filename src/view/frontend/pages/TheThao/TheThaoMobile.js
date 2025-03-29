@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import NewsNotification from "../../components/NewsNotification";
 import "../../../public/frontend/css/TheThao.css";
-import NameGame from "../../components/NameGame";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ListGame from "../../components/ListGame";
