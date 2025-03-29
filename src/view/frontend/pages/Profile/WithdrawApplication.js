@@ -1,18 +1,12 @@
 import React, { useState } from "react";
-import { Select } from "antd";
 import { Link } from "react-router-dom";
-const { Option } = Select;
 
 const WithdrawApplication = () => {
   const [activeTab, setActiveTab] = useState("bank");
   const [amount, setAmount] = useState("");
-  const [exchangeRate] = useState(25500);
   const [password, setPassword] = useState("");
 
-  const convertedAmount =
-    activeTab === "usdt" && amount
-      ? (amount * exchangeRate).toLocaleString()
-      : "";
+
 
   return (
     <div className="ctnr">
