@@ -23,7 +23,7 @@ const Header = ({ onLoginClick, onSignupClick }) => {
   const handleLoginClick = event => {
     event.preventDefault()
     if (showSuccessBox) {
-      navigate('/hoahong') // Chuyển trang nếu showSuccessBox tồn tại
+      navigate('/hoahong')
     } else {
       onLoginClick()
     }

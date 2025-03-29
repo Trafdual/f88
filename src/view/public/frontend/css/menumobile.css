@@ -121,6 +121,6 @@
 }
 @media screen and (max-width: 990px) {
   .list-tab-category-mobile {
-    padding-bottom: 15px;
+    padding: 20px;
   }
 }

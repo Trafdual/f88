@@ -223,7 +223,11 @@
   }
 
   .slick-prev {
-    left: unset !important;
+    left: -4px !important;
+  }
+
+  .slick-next {
+    right: -4px !important;
   }
 
   .game_header {
