@@ -20,6 +20,7 @@ import NoHuLayout from './view/frontend/pages/NoHu/NoHuLayout'
 import BanCaLayout from './view/frontend/pages/BanCa/BanCaLayout'
 import HoaHongLayout from './view/frontend/pages/HoaHong/HoaHongLayout'
 import TheThaoMobile from './view/frontend/pages/TheThao/TheThaoMobile'
+import DaGaMobile from './view/frontend/pages/DaGa/DaGaMobile'
 
 function App () {
   return (
@@ -29,7 +30,7 @@ function App () {
           <Route path='/' element={<WebsiteLayout />}>
             <Route index element={<Home />} />
             <Route path='thethao' element={<TheThaoLayout />} />
-            <Route path='daga' element={<DaGaLayout />} />
+            <Route path='daga' element={<DaGaMobile />} />
             <Route path='casino' element={<CasinoLayout />} />
             <Route path='nohu' element={<NoHuLayout />} />
             <Route path='banca' element={<BanCaLayout />} />

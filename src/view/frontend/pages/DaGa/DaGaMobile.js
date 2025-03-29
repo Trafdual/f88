@@ -9,7 +9,7 @@ import ListGameMobile2 from "../../components/ListGameMobile2";
 import MenuMobile from "../../components/MenuMobile";
 import Banner from "../../components/Banner";
 
-function TheThaoMobile() {
+function DaGaMobile() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -22,22 +22,20 @@ function TheThaoMobile() {
   }, []);
 
   const thethao = [
-    { name: "SABA Sports", img: "/afb2.jpg" },
-    { name: "SABA Sports", img: "/bti2.jpg" },
-    { name: "SABA Sports", img: "/saba2.jpg" },
+    { name: "SABA Sports", img: "/daga2.jpg" },
   ];
 
   return (
-    <div className='div_thethao_page'>
-      {isMobile ? <div></div> : <div className='banner_game'></div>}
+    <div className="div_thethao_page">
+      {isMobile ? <div></div> : <div className="banner_game"></div>}
       <Banner />
       <NewsNotification />
       {isMobile && <MenuMobile />}
       <div className="div_name_game_tong">
-        <NameGame
-          name={"Thể Thao"}
+      <NameGame
+          name={'Đá Gà'}
           title={
-            "Tổng hợp các nhà cung cấp cá cược thể thao hàng đầu, tỉ lệ cược tốt nhất."
+            'Đại chiến hùng kê với những trận đấu đỉnh cao, tỉ lệ kèo cực cao.'
           }
         />
         {isMobile ? (
@@ -50,4 +48,4 @@ function TheThaoMobile() {
   );
 }
 
-export default TheThaoMobile;
+export default DaGaMobile;

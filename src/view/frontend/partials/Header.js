@@ -159,7 +159,7 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                       <BoxSigninSucecs />
 
                       <div className='singin-name'>
-                        <p> Bao10122003 </p>
+                        <p> ALO123123 </p>
                         <span>0</span>
                       </div>
 
