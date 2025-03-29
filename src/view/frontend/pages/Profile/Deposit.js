@@ -93,10 +93,9 @@ const Deposit = () => {
       <ToastContainer position='top-right' autoClose={3000} />
 
       <div className='box-tab-depoin'>
-        <h4>Phương thức nạp:</h4>
         <div className='list-withdraw-header'>
           <div
-            className={`item-withdraw-header ${
+            className={`item-withdraw-header-deposite ${
               activeTab === '1' ? 'active' : ''
             }`}
             onClick={() => setActiveTab('1')}
@@ -105,7 +104,7 @@ const Deposit = () => {
             <span>Ngân hàng</span>
           </div>
           <div
-            className={`item-withdraw-header ${
+            className={`item-withdraw-header-deposite ${
               activeTab === '2' ? 'active' : ''
             }`}
             onClick={() => setActiveTab('2')}
@@ -119,15 +118,6 @@ const Deposit = () => {
         {activeTab === '1' && (
           <div className='list-group-depoin'>
             <div className='box-right-depoins'>
-              <div class='divchonmangluoi_depoin'>
-                <h4>Nạp tiền bằng</h4>
-                <div class='divinputmangluoi_depoin'>
-                  <input type='radio' checked='x' />
-                  <img src='/nganhang.png' alt='' width='24' height='24' />
-                  <span>Ngân hàng</span>
-                </div>
-              </div>
-
               <form action=''>
                 <div className='custom-select'>
                   <Tippy content='Chọn một ngân hàng'>
