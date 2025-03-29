@@ -846,6 +846,8 @@ a.thietlap {
   border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  height: 95vh;
+
 }
 .body-historys {
   border: 1px solid #ddd;
@@ -984,5 +986,12 @@ p.price-lose {
 
   .member-depoin {
     padding: 20px;
+  }
+  .item-withdraw-header span {
+    font-size: 15px !important;
+  }
+
+  .item-withdraw-header{
+    padding: 0 !important;
   }
 }

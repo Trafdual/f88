@@ -100,7 +100,7 @@ const HistoryRut = () => {
           </div>
           <Input.Search
             placeholder="Tìm kiếm"
-            style={{ width: 200 }}
+            style={{ width: 200, fontSize: '16px' }}
             onSearch={(value) => console.log(value)}
           />
         </div>
