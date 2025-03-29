@@ -1,12 +1,30 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import NewsNotification from '../components/NewsNotification'
 import Banner from '../components/Banner'
 import MenuMobile from '../components/MenuMobile'
+import BoxSigninSucecs from '../components/BoxSigninSucecs'
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const navigate = useNavigate()
+  const [DangNhapStatus, setDangNhapStatus] = useState(
+    sessionStorage.getItem('dangnhap')
+  )
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setDangNhapStatus(sessionStorage.getItem('dangnhap'))
+    }
+
+    window.addEventListener('storage', handleStorageChange)
+
+    setDangNhapStatus(sessionStorage.getItem('dangnhap'))
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange)
+    }
+  }, [])
 
   const sportsData = [
     {
@@ -185,6 +203,20 @@ const Home = () => {
       <div className='box-list-category-game-mobile'>
         <div className='ctnr'>
           <MenuMobile />
+
+          {DangNhapStatus && (
+            <div className='box-login-sigin-respert'>
+              <div class='member-name-login'>
+                <div className='singin-name'>
+                  <p> Bao10122003 </p>
+                  <span>0</span>
+                </div>
+              </div>
+              <div className='box-member-right-login'>
+                <BoxSigninSucecs />
+              </div>
+            </div>
+          )}
 
           <div className='game-part-list'>
             <div className='row'>

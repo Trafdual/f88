@@ -427,6 +427,55 @@ li.Tkweb {
   display: block;
 }
 @media (max-width: 990px) {
+  .icon-mail a img {
+    width: 30px;
+    height: 30px;
+  }
+  .icon-mail {
+    display: block;
+  }
+  .Box-signin-sucecs {
+    display: none;
+  }
+  .box-login-sigin-respert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .box-member-right-login ul {
+    display: flex;
+    gap: 0px 25px;
+  }
+
+  .box-member-right-login ul li a {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .box-member-right-login ul li a img {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+  }
+
+  .box-member-right-login ul li a span {
+    font-size: 12px;
+  }
+
+  .singin-name p {
+    font-size: 15px;
+  }
+
+  .singin-name span {
+    font-size: 18px;
+  }
+
+  .box-login-sigin-respert {
+    padding: 10px 0px;
+  }
   .action-box-profile ul {
     display: block !important;
   }

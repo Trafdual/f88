@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 const Login = ({ onClose, onSwitch }) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const navigate = useNavigate()
 
   const validateForm = () => {
     if (!username.trim()) {
@@ -28,7 +29,7 @@ const Login = ({ onClose, onSwitch }) => {
     if (validateForm()) {
       toast.success('Đăng nhập thành công!')
       sessionStorage.setItem('dangnhap', true)
-      onClose()
+      window.location.href = '/'
       console.log('Đăng nhập:', { username, password })
     }
   }
