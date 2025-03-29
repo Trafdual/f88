@@ -266,7 +266,7 @@
 }
 input[type='radio'] {
   background-color: #0000;
-  height: 18px;
+  height: 18px !important;
   outline: none;
   position: relative;
   width: 18px;
@@ -414,11 +414,14 @@ input[type='radio']:checked:after {
   font-size: 18px;
 }
 
+.divtientong {
+  margin-top: 20px;
+}
+
 .divtien {
   column-gap: 8px;
   cursor: pointer;
   flex-wrap: wrap;
-  margin-top: 20px;
   overflow-x: auto;
   align-items: center;
   display: flex;
@@ -770,7 +773,6 @@ a.thietlap {
 .hoinghi {
   background-color: #e8f5fe;
   height: 90vh;
-
 }
 
 .list-banence-member {
@@ -780,8 +782,6 @@ a.thietlap {
   flex-wrap: wrap;
   margin: 12px 12px 0px;
 }
-
-
 
 .item-member-bannence {
   vertical-align: top;
@@ -847,7 +847,6 @@ a.thietlap {
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   height: 95vh;
-
 }
 .body-historys {
   border: 1px solid #ddd;
@@ -960,6 +959,12 @@ p.price-lose {
   color: #3f5075;
 }
 
+.tabs {
+  width: 0 !important;
+  height: unset !important;
+  margin-right: 30px;
+}
+
 @media (max-width: 990px) {
   .list-banence-member {
     margin: 12px 0px;
@@ -991,7 +996,7 @@ p.price-lose {
     font-size: 15px !important;
   }
 
-  .item-withdraw-header{
+  .item-withdraw-header {
     padding: 0 !important;
   }
 }

@@ -44,7 +44,8 @@ const WithdrawApplication = () => {
         <div className='withdraw-content'>
           <div className='balance-info'>
             <p>
-              Số dư ước tính: <strong>0 VNĐ</strong>
+              Số dư ước tính:{' '}
+              <strong> {activeTab === 'bank' ? '0 VNĐ' : '0.00 USDT'}</strong>
             </p>
           </div>
 
@@ -96,6 +97,12 @@ const WithdrawApplication = () => {
 
             {activeTab === 'usdt' && (
               <>
+                <div class='divinputmangluoi_depoin'>
+                  <input type='radio' checked />
+                  <img alt='' width='30' height='30' src='/usdt.svg' />
+                  <span>USDT</span>
+                </div>
+
                 <div className='item-label-bank'>
                   <p>Địa chỉ ví</p>
                   <input placeholder='Nhập địa chỉ ví' />

@@ -1,0 +1,49 @@
+.div_selectgame_container {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.ul_select_game {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-column-gap: 18px;
+  column-gap: 18px;
+  row-gap: 12px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 7.3px 6.8px rgba(164, 190, 255, 0.25),
+    0 3.4px 9.6px 9.3px rgba(49, 73, 133, 0.02);
+  border: solid 1.7px #fff;
+  background-color: #ecf3fd;
+  list-style: none;
+}
+.ul_select_game li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 146px;
+  height: 52px;
+  text-align: center;
+  background: url('../../../../../public/btnselectgame.png') no-repeat center
+    top / cover;
+
+  cursor: pointer;
+}
+
+.ul_select_game li.active {
+  background-position: center bottom;
+}
+
+.ul_select_game li figure {
+  margin: 0;
+}
+
+.ul_select_game li figure img {
+  vertical-align: middle;
+  border: 0;
+}

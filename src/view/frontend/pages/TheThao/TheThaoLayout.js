@@ -7,9 +7,11 @@ import 'slick-carousel/slick/slick-theme.css'
 import ListGame from '../../components/ListGame'
 import ListGameMobile from '../../components/ListGameMobile'
 import MenuMobile from '../../components/MenuMobile'
+import SelectGame from '../../components/SelectGame'
 
 function TheThaoLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+  const [key, setkey] = useState('wm')
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +28,11 @@ function TheThaoLayout () {
     { name: 'PANDA Sports', img: '/panda.webp' },
     { name: 'AFB Sports', img: '/afb.webp' },
     { name: 'COCKFIGHT', img: '/cockfight.webp' }
+  ]
+
+  const selectgame = [
+    { src: '/logo/wmlogo.png', key: 'wm' },
+    { src: '/logo/dglogo.png', key: 'dg' }
   ]
 
   return (
@@ -49,6 +56,7 @@ function TheThaoLayout () {
             'Tổng hợp các nhà cung cấp cá cược thể thao hàng đầu, tỉ lệ cược tốt nhất.'
           }
         />
+        <SelectGame listdanhsach={selectgame} selectedKey={key} setkey={setkey} />
         {isMobile ? (
           <ListGameMobile list={thethao} />
         ) : (

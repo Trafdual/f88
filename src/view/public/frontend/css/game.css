@@ -1,0 +1,54 @@
+.div_game_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.div_game_container > img {
+  margin: 0 auto;
+}
+
+.imggame {
+  vertical-align: middle;
+  border: 0;
+}
+
+.div_game_content_container {
+  width: 595px;
+  padding: 40px 40px 30px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 7.2px 6.7px rgba(164, 190, 255, 0.25),
+    0 3.4px 9.6px 9.2px rgba(49, 73, 133, 0.02);
+  border: solid 1.7px #fff;
+  background-color: #f5f9ff;
+}
+
+.name_game_content {
+  display: block;
+  line-height: 60px;
+  margin: 0 0 20px;
+  text-shadow: 1.9px 2.9px 5px rgba(77, 157, 251, 0.25);
+  background-image: linear-gradient(to bottom, #359eff 48%, #1f79ff 82%);
+  font-family: 'SFProDisplay-Heavy';
+  font-size: 60px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.trangthai_game_content {
+  display: block;
+  color: #3f4f75;
+  text-shadow: 1.9px 2.9px 5px rgba(77, 157, 251, 0.25);
+  text-transform: uppercase;
+  font-family: 'SFProDisplay-Heavy';
+  font-size: 40px;
+  line-height: 1;
+}
+
+.div_discount_game_container{
+    position: relative;
+    display: inline-block;
+    margin: 20px 0 24px;
+
+}
