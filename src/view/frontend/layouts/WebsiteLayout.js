@@ -42,10 +42,10 @@ const WebsiteLayout = () => {
       )}
 
       <Outlet />
-      <footer>
-        <Footer login={() => setPopup('login')} />
+      <div>
+        <div login={() => setPopup('login')} />
         <FooterPage />
-      </footer>
+      </div>
     </div>
   )
 }

@@ -2,7 +2,12 @@
   display: block;
   filter: contrast(0.5);
 }
-
+body{
+  display: block;
+  height: 100%;
+  background: url(/public/bgmobile.jpg) no-repeat center bottom;
+  background-size: contain;
+}
 .item-brand:hover img {
   filter: unset;
 }
@@ -37,6 +42,8 @@ span.show-footer-top {
   text-transform: uppercase;
   cursor: pointer;
   margin-left: 3px;
+  margin-top: 0px;
+
 }
 
 .list-brand-footer {
@@ -119,11 +126,84 @@ span.show-footer-top {
 .list-menu-entire-fixed {
   display: none;
 }
+.desc-footer-top span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3   ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.desc-footer-top.active span {
+  display: block;
+}
+
+.close-footer {
+  display: none;
+}
 @media (max-width: 990px) {
   footer {
-    padding-bottom: 7rem;
+    padding-bottom: 30px;
   }
+  .close-footer {
+    display: block !important;
+}
+span.show-footer-top {
+    padding: 0px 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    display: inline-block !important;
+}
+.logo-footer img {
+    height: 61px;
+    width: auto;
+    margin:0 auto;
+}
+.btn-xemthem {
+    display: none;
+}
+
+.close-footer img {
+    height: 15px;
+}
+
+span.show-footer-top {
+    display: block !important;
+    text-align: center;
+}
+
+
+.logo-footer {
+    text-align: center;
+}
+
+.desc-footer-top {
+    margin-top: 0px;
+}
+
+.desc-footer-top span {
+    margin-top: 0px;
+    line-height: 1.5;
+    display: unset;
+}
+
+
+footer {
+    background: none;
+}
+
+.desc-footer-top span {
+    color: #0053e0;
+}
+
+.footer-center-brand {
+    display: none;
+}
+
+.coppy-right-footer {
+    display: none;
+}
 
   .list-category-footers {
     display: none;
@@ -132,7 +212,9 @@ span.show-footer-top {
   .footer-top {
     width: 100%;
   }
-
+  .desc-footer-top.active span {
+    display: none;
+}
   .list-menu-entire-fixed {
     display: block;
   }

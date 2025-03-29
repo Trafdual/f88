@@ -119,7 +119,7 @@ button.test-games i {
 :hover {
   background-position: center bottom;
   color: #3f4f75;
-  background-position: 0px 88%;
+  /* background-position: 0px 88%; */
 }
 
 button.signup:hover {
