@@ -11,7 +11,6 @@ const Deposit = () => {
     img: '/nganhang.png' // Icon mặc định (có thể đổi)
   })
 
-  const [sotien, setsottien] = useState('')
   const [tienvalue, settienvalue] = useState('')
 
   const options = [
@@ -168,7 +167,6 @@ const Deposit = () => {
                         className='divtien_item'
                         key={index}
                         onClick={() => {
-                          setsottien(item.value)
                           settienvalue(item.tienvalue)
                         }}
                       >
