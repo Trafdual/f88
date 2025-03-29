@@ -15,12 +15,6 @@ const FooterFixed = () => {
           <li>
             <Link>
               <div className='icon-menu-fixed-footer'></div>
-              Tải App
-            </Link>
-          </li>
-          <li>
-            <Link>
-              <div className='icon-menu-fixed-footer'></div>
               Khuyến mãi
             </Link>
           </li>
