@@ -22,9 +22,6 @@ function ListGameMobile ({ list }) {
                   <button className='play_button'>Play</button>
                 </div>
               </div>
-              <div className='game_info'>
-                <span className='game_title'>{item.name}</span>
-              </div>
             </div>
           ))}
         </div>

@@ -8,6 +8,7 @@ import ListGameMobile from '../../components/ListGameMobile'
 import MenuMobile from '../../components/MenuMobile'
 import Game from '../../components/Game'
 import SelectGame from '../../components/SelectGame'
+import GamePartListCasinoGreat from '../../components/ListGameCasinoAndGreat'
 
 function CasinoLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
@@ -17,7 +18,7 @@ function CasinoLayout () {
     src: '/logo/wmgame.png',
     namegame: 'WM',
     trangthai: 'trực tuyến',
-    profit:'0.80',
+    profit: '0.80',
     content:
       ' Sảnh CASINO trực tuyến được nhiều khách hàng lựa chọn tham gia trên thị trường cá cược, đa dạng các sản phẩm như: Baccarat, Xóc đĩa, Roulette, Tài xỉu, Fantan ... cùng các nữ thần chia bài xinh đẹp, nóng bỏng, thân thiện tương tác trực tuyến với khách hàng, điều này thật thú vị và hấp dẫn. '
   })
@@ -32,12 +33,12 @@ function CasinoLayout () {
   }, [])
 
   const images = [
-    { name: 'AE Sexy', img: '/aesexy.webp' },
-    { name: 'AG Asia', img: '/agassia.webp' },
-    { name: 'Evolution', img: '/evolution.webp' },
-    { name: 'SA Gaming', img: '/sagaming.webp' },
-    { name: 'WM Casino', img: '/1e33aab34776468f825b71a279b369f5.png' },
-    { name: 'Dream Gaming', img: '/dreamgaming.webp' }
+    { name: 'AE Sexy', img: '/casino/se.png' },
+    { name: 'AG Asia', img: '/casino/ag.png' },
+    { name: 'Evolution', img: '/casino/evo.png' },
+    { name: 'SA Gaming', img: '/casino/sa.png' },
+    { name: 'WM Casino', img: '/casino/wm.png' },
+    { name: 'Dream Gaming', img: '/casino/dg.png' }
   ]
 
   const selectgame = [
@@ -48,7 +49,7 @@ function CasinoLayout () {
         src: '/logo/wmgame.png',
         namegame: 'WM',
         trangthai: 'trực tuyến',
-        profit:'0.80',
+        profit: '0.80',
         content:
           ' Sảnh CASINO trực tuyến được nhiều khách hàng lựa chọn tham gia trên thị trường cá cược, đa dạng các sản phẩm như: Baccarat, Xóc đĩa, Roulette, Tài xỉu, Fantan ... cùng các nữ thần chia bài xinh đẹp, nóng bỏng, thân thiện tương tác trực tuyến với khách hàng, điều này thật thú vị và hấp dẫn. '
       }
@@ -60,7 +61,7 @@ function CasinoLayout () {
         src: '/logo/dggame.png',
         namegame: 'DG',
         trangthai: 'trực tuyến',
-        profit:'0.80',
+        profit: '0.80',
         content:
           ' Sảnh CASINO trực tuyến cung cấp đa dạng trò chơi trực tuyến với các nữ thần xinh đẹp đến từ nhiều nước trên toàn thế giới, tương tác vui vẻ mang lại cảm giác trải nghiệm vô cùng thú vị. Điểm cược tối thiểu chỉ từ 1 điểm phù hợp với tất cả hội viên khi muốn tham gia.  '
       }
@@ -83,21 +84,26 @@ function CasinoLayout () {
       {isMobile && <MenuMobile />}
 
       <div className='div_name_game_tong'>
-        <NameGame
-          name={'Casino'}
-          title={
-            'Quy tụ nhiều nữ thần chia bài xinh đẹp, Hoàn trả cực cao nhất thị trường.'
-          }
-        />
+        {!isMobile && (
+          <NameGame
+            name={'Casino'}
+            title={
+              'Quy tụ nhiều nữ thần chia bài xinh đẹp, Hoàn trả cực cao nhất thị trường.'
+            }
+          />
+        )}
 
-        <SelectGame
-          listdanhsach={selectgame}
-          selectedKey={key}
-          setkey={setkey}
-          setitem={setitem}
-        />
+        {!isMobile && (
+          <SelectGame
+            listdanhsach={selectgame}
+            selectedKey={key}
+            setkey={setkey}
+            setitem={setitem}
+          />
+        )}
 
         {isMobile ? <ListGameMobile list={images} /> : <Game item={item} />}
+        {isMobile && <GamePartListCasinoGreat />}
       </div>
     </div>
   )

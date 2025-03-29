@@ -228,10 +228,10 @@
 
   .game_card {
     position: relative;
-    width: 140px !important;
     text-align: center;
     padding: 5px;
     cursor: pointer;
+    flex: 1;
   }
 
   .game_card_wrapper {
@@ -249,5 +249,9 @@
 
   .game_header {
     padding-right: 10px;
+  }
+  .game_thumbnail{
+    width: unset !important;
+    max-width: unset !important;
   }
 }

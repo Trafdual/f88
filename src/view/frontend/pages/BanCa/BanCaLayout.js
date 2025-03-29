@@ -5,9 +5,9 @@ import NameGame from '../../components/NameGame'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import ListGame from '../../components/ListGame'
-import ListGameMobile from '../../components/ListGameMobile'
 import MenuMobile from '../../components/MenuMobile'
 import SelectGame from '../../components/SelectGame'
+import GameMobile from '../../components/GameMobile'
 
 function BanCaLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
@@ -56,18 +56,34 @@ function BanCaLayout () {
       <NewsNotification />
       {isMobile && <MenuMobile />}
       <div className='div_name_game_tong'>
-        <NameGame
-          name={'Bắn Cá'}
-          title={'Giao diện đẹp mắt, Sống động từ nhiều nhà cung cấp hàng đầu.'}
-        />
-        <SelectGame
-          listdanhsach={selectgame}
-          selectedKey={key}
-          setkey={setkey}
-          setitem={setitem}
-        />
+        {!isMobile && (
+          <NameGame
+            name={'Bắn Cá'}
+            title={
+              'Giao diện đẹp mắt, Sống động từ nhiều nhà cung cấp hàng đầu.'
+            }
+          />
+        )}
+        {!isMobile && (
+          <SelectGame
+            listdanhsach={selectgame}
+            selectedKey={key}
+            setkey={setkey}
+            setitem={setitem}
+          />
+        )}
 
-        {isMobile ? <ListGameMobile list={item} /> : <ListGame list={item} />}
+        {isMobile ? (
+          <GameMobile
+            listdanhsach={selectgame}
+            selectedKey={key}
+            setkey={setkey}
+            setitem={setitem}
+            item={item}
+          />
+        ) : (
+          <ListGame list={item} />
+        )}
       </div>
     </div>
   )

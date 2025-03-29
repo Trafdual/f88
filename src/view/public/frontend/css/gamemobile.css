@@ -1,0 +1,141 @@
+
+.div_gamemobile_container {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255, 255, 255, 1);
+  display: flex;
+  flex-grow: 1;
+}
+.section_sidebartong {
+  position: relative;
+  width: 25%;
+}
+
+.section_sidebar {
+  bottom: auto;
+  height: 588px;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.section_sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 88%;
+  height: 100%;
+}
+
+.div_sidebar_container {
+  position: relative;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.ul_sidebar_container {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ng-star-inserted {
+  position: relative;
+  width: 88%;
+  margin: 3px 0;
+  padding: 3px 0;
+  color: rgb(0, 0, 0, 1);
+  text-align: center;
+  border-radius: 0 10px 10px 0;
+  background: #c4ebff;
+}
+
+.ng-star-inserted.active {
+  color: rgb(255, 255, 255, 1);
+  background: linear-gradient(180deg, #77d1ff, #419aff, #3eb5ff);
+}
+
+.ng-star-inserted.active::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 7px);
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-width: 7px 0 7px 8px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: rgb(67, 156, 255, 1);
+}
+
+.icon_sidebar {
+  max-width: 100%;
+  height: 2.5rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+
+.div_muiten_container {
+  position: absolute;
+  bottom: 0px;
+  width: 88%;
+  height: 20px;
+  --tw-text-opacity: 1;
+  color: rgb(255, 255, 255, 1);
+  background: linear-gradient(180deg, #359eff, #1f79ff);
+  box-shadow: 0 -3px 6px #0000004d;
+  text-align: center;
+  z-index: 1;
+}
+.i_muiten {
+  font-weight: 400;
+  font-family: 'Font Awesome 5 Pro';
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.i_muiten:before {
+  content: '\f322';
+}
+.section_listgame {
+  width: 75%;
+  height: 100%;
+}
+
+.div_listgame_container {
+  min-height: 100%;
+  position: relative;
+}
+.div_listgame {
+  min-height: 600px;
+}
+
+.section_game {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.div_game_list {
+  width: 100px;
+  text-align: center;
+}
+
+
+.div_game_list img {
+  width: 100px;
+  height: 100px;
+}

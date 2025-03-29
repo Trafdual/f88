@@ -5,9 +5,9 @@ import NameGame from '../../components/NameGame'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import ListGame from '../../components/ListGame'
-import ListGameMobile from '../../components/ListGameMobile'
 import MenuMobile from '../../components/MenuMobile'
 import SelectGame from '../../components/SelectGame'
+import GameMobile from '../../components/GameMobile'
 
 function NoHuLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
@@ -72,20 +72,34 @@ function NoHuLayout () {
       {isMobile && <MenuMobile />}
 
       <div className='div_name_game_tong'>
-        <NameGame
-          name={'Nổ Hũ'}
-          title={
-            'Hơn 8.000 trò chơi đa dạng và hoàn trả cực khủng lên tới 2.00%'
-          }
-        />
-        <SelectGame
-          listdanhsach={selectgame}
-          selectedKey={key}
-          setkey={setkey}
-          setitem={setitem}
-        />
+        {!isMobile && (
+          <NameGame
+            name={'Nổ Hũ'}
+            title={
+              'Hơn 8.000 trò chơi đa dạng và hoàn trả cực khủng lên tới 2.00%'
+            }
+          />
+        )}
+        {!isMobile && (
+          <SelectGame
+            listdanhsach={selectgame}
+            selectedKey={key}
+            setkey={setkey}
+            setitem={setitem}
+          />
+        )}
 
-        {isMobile ? <ListGameMobile list={item} /> : <ListGame list={item} />}
+        {isMobile ? (
+          <GameMobile
+            listdanhsach={selectgame}
+            selectedKey={key}
+            setkey={setkey}
+            setitem={setitem}
+            item={item}
+          />
+        ) : (
+          <ListGame list={item} />
+        )}
       </div>
     </div>
   )
