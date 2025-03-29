@@ -44,7 +44,7 @@ const Silbar = () => {
         <FontAwesomeIcon icon={faUserCircle} />
         <div className='box-name-profile'>
           <span>Tài Khoản</span>
-          <span>Bao10122003</span>
+          <span>ALO123123</span>
         </div>
         <div className='d-flex ai-center'>
           <div className='price-avatar'>

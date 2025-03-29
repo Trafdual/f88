@@ -5,7 +5,7 @@ import NameGame from '../../components/NameGame'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import ListGame from '../../components/ListGame'
-import ListGameMobile from '../../components/ListGameMobile'
+import ListGameMobile2 from '../../components/ListGameMobile2'
 import MenuMobile from '../../components/MenuMobile'
 
 function DaGaLayout () {
@@ -38,7 +38,7 @@ function DaGaLayout () {
           }
         />
         {isMobile ? (
-          <ListGameMobile list={thethao} />
+          <ListGameMobile2 list={thethao} />
         ) : (
           <ListGame list={thethao} />
         )}

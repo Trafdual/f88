@@ -4,6 +4,8 @@ import NewsNotification from '../components/NewsNotification'
 import Banner from '../components/Banner'
 import MenuMobile from '../components/MenuMobile'
 import BoxSigninSucecs from '../components/BoxSigninSucecs'
+import { faSync } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -208,8 +210,10 @@ const Home = () => {
             <div className='box-login-sigin-respert'>
               <div class='member-name-login'>
                 <div className='singin-name'>
-                  <p> Bao10122003 </p>
-                  <span>0</span>
+                  <p> ALO123123 </p>
+                  <span>0  </span>
+
+                  <FontAwesomeIcon icon={faSync} />
                 </div>
               </div>
               <div className='box-member-right-login'>
@@ -279,7 +283,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          {/*          
+                   
           <div className="game-part-list">
             <div className="title-part-game d-flex js-between ai-center">
               <span>Trò Chơi Live Casino Hay Nhất</span>
@@ -373,7 +377,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>

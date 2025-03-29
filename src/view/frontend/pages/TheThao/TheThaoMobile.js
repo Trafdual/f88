@@ -28,8 +28,8 @@ function TheThaoMobile() {
   ];
 
   return (
-    <div className="div_thethao_page">
-      {isMobile ? <div></div> : <div className="banner_game"></div>}
+    <div className='div_thethao_page'>
+      {isMobile ? <div></div> : <div className='banner_game'></div>}
       <Banner />
       <NewsNotification />
       {isMobile && <MenuMobile />}
