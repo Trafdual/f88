@@ -6,6 +6,7 @@ import NewsNotification from '../components/NewsNotification'
 import Header from '../partials/Header'
 import Footer from '../partials/Footer'
 import Login from '../pages/Login'
+import FooterPage from '../partials/FooterPage'
 
 const WebsiteProfile = () => {
   const [popup, setPopup] = useState(null)
@@ -33,7 +34,10 @@ const WebsiteProfile = () => {
         />
       )}
 
-      <Footer login={() => setPopup('login')}></Footer>
+      <footer>
+        <Footer login={() => setPopup('login')} />
+        <FooterPage />
+      </footer>
     </div>
   )
 }

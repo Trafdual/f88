@@ -141,9 +141,11 @@ span.show-footer-top {
     justify-content: space-between;
     padding: 7px 10px 5px;
   }
+  .icon-menu-fixed-footer-active {
+    background-position: bottom !important;
+  }
   .list-menu-entire-fixed ul li .icon-menu-fixed-footer {
     background-size: cover !important;
-    background-position: bottom;
     width: 28px;
     height: 28px;
     margin: 0px auto;
@@ -151,7 +153,6 @@ span.show-footer-top {
   .list-menu-entire-fixed ul li .icon-menu-fixed-footer:nth-child(1) {
     background: url(/public/home.7374acd12c1c4dd4.png);
     background-size: cover;
-    background-position: bottom;
     width: 28px;
     height: 28px;
     margin: 0px auto;

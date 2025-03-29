@@ -15,6 +15,7 @@ import '../../public/frontend/css/Footer.css'
 import '../../public/frontend/css/Home.css'
 import '../../public/frontend/css/Profile.css'
 import '../../public/frontend/css/Resgeter.css'
+import FooterPage from '../partials/FooterPage'
 
 const WebsiteLayout = () => {
   const [popup, setPopup] = useState(null)
@@ -41,7 +42,10 @@ const WebsiteLayout = () => {
       )}
 
       <Outlet />
-      <Footer login={() => setPopup('login')} />
+      <footer>
+        <Footer login={() => setPopup('login')} />
+        <FooterPage />
+      </footer>
     </div>
   )
 }

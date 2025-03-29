@@ -236,11 +236,11 @@
     height: 140px;
   }
   .slick-prev {
-    left: -4px !important;
+    left: -15px !important;
   }
 
   .slick-next {
-    right: -4px !important;
+    right: -15px !important;
   }
 
   .game_header {

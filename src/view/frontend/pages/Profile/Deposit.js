@@ -154,7 +154,7 @@ const Deposit = () => {
               <form action=''>
                 <div className='custom-select'>
                   <Tippy content='Chọn một ngân hàng'>
-                    <button className='select-button'>
+                    <button type='button' className='select-button'>
                       <img
                         src={selected.img}
                         alt={selected.label}
