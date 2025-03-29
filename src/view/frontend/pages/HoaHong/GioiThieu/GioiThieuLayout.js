@@ -65,12 +65,12 @@ function GioiThieuLayout () {
           <div className='formgioithieu_input'>
             <input
               type='text'
-              value={'https://www.fnk88.club/auth/register?reff=SGF93IWV'}
+              value={'https://www.jqk88.com/auth/register?reff=SGF93IWV'}
               readOnly
             />
             <span
               onClick={() =>
-                handleCopy('https://www.fnk88.club/auth/register?reff=SGF93IWV')
+                handleCopy('https://www.jqk88.com/auth/register?reff=SGF93IWV')
               }
             >
               Sao chép link
