@@ -106,6 +106,8 @@ const History = () => {
           pagination={false}
           rowKey='time'
           scroll={{ x: 'max-content' }}
+        locale={{ emptyText: " Không có bất kì thông tin nào" }}
+
         />
       </div>
     </div>

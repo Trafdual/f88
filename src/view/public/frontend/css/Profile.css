@@ -932,7 +932,7 @@ p.price-lose {
   font-weight: 400;
 }
 .flex-history-member {
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-top: none;
   margin-bottom: 20px;
@@ -948,9 +948,27 @@ p.price-lose {
 }
 .box-vition-history {
   display: flex;
-  flex-direction: column;
   gap: 10px 0px;
 }
+.btnhistoryrut {
+  padding: 8px 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 4px;
+}
+
+.btnhistoryrut:hover {
+  background: #f0f0f0;
+}
+
+.btnhistoryrut.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
 .table-filters {
   border: 1px solid #ddd;
 }
@@ -997,7 +1015,9 @@ p.price-lose {
   .list-banence-member {
     margin: 12px 0px;
   }
-
+  .flex-historyrut {
+    display:block;
+  }
   .item-member-bannence p {
     font-size: 11px;
   }
