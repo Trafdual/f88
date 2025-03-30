@@ -4,10 +4,19 @@ import Footer from '../partials/Footer'
 import { Outlet } from 'react-router-dom'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+
 const LayoutProfileMobile = () => {
   const [popup, setPopup] = useState(null)
+  
   return (
     <div>
+<style>
+        {`
+              body {
+    background: none;
+}
+        `}
+      </style>
       <Header
         onLoginClick={() => setPopup('login')}
         onSignupClick={() => setPopup('signup')}

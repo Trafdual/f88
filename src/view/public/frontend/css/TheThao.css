@@ -8,7 +8,9 @@
   width: 1200px;
   margin: 0 auto;
 }
-
+.div_thethao_page {
+  background: #f0f6ff;
+}
 @media screen and (max-width: 768px) {
   .div_thethao_page {
     overflow: hidden;

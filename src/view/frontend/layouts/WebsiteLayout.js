@@ -21,6 +21,7 @@ const WebsiteLayout = () => {
 
   return (
     <div>
+      
       <Header
         onLoginClick={() => setPopup('login')}
         onSignupClick={() => setPopup('signup')}
