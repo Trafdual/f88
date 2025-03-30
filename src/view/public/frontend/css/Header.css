@@ -122,13 +122,14 @@ button.test-games i {
 }
 
 :hover {
-  background-position: center bottom;
+  /* background-position: center bottom; */
   color: #3f4f75;
   /* background-position: 0px 88%; */
 }
 
 button.signup:hover {
   background-position: 0px 90%;
+  
 }
 
 button.test-games:hover {

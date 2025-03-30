@@ -13,7 +13,6 @@ import MemberCenter from './view/frontend/pages/MemberCenter'
 import Deposit from './view/frontend/pages/Profile/Deposit'
 import ChangeBankAccount from './view/frontend/pages/Profile/ChangeBankAccount'
 import LayoutProfileMobile from './view/frontend/layouts/LayoutProfileMobile'
-import DaGaLayout from './view/frontend/pages/DaGa/DaGaLayout'
 import TheThaoLayout from './view/frontend/pages/TheThao/TheThaoLayout'
 import CasinoLayout from './view/frontend/pages/Casino/CasinoLayout'
 import NoHuLayout from './view/frontend/pages/NoHu/NoHuLayout'
@@ -21,6 +20,7 @@ import BanCaLayout from './view/frontend/pages/BanCa/BanCaLayout'
 import HoaHongLayout from './view/frontend/pages/HoaHong/HoaHongLayout'
 import TheThaoMobile from './view/frontend/pages/TheThao/TheThaoMobile'
 import DaGaMobile from './view/frontend/pages/DaGa/DaGaMobile'
+import PromotionLayout from './view/frontend/pages/Promotion/PromotionLayout'
 
 function App () {
   return (
@@ -36,6 +36,7 @@ function App () {
             <Route path='banca' element={<BanCaLayout />} />
             <Route path='hoahong' element={<HoaHongLayout />} />
             <Route path='thethaomobile' element={<TheThaoMobile />} />
+            <Route path='promotion' element={<PromotionLayout />} />
           </Route>
 
           <Route path='/WebsiteProfile' element={<WebsiteProfile />}>

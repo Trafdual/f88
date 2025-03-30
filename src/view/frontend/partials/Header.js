@@ -126,7 +126,7 @@ const Header = ({ onLoginClick, onSignupClick }) => {
               <div className='box-nav-desk-header-top'>
                 <ul class='box-no-active-sigin'>
                   <li>
-                    <Link to=''>
+                    <Link to='/promotion'>
                       <img src='/icon1.png' alt='' />
                       <span>Khuyến Mãi</span>
                     </Link>

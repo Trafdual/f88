@@ -1,6 +1,8 @@
 /* CSS hiện có */
 .banner_game {
   height: 244px;
+  background-position: center bottom;
+
 }
 
 .div_name_game_tong {
@@ -11,6 +13,7 @@
 .div_thethao_page {
   background: #f0f6ff;
 }
+
 @media screen and (max-width: 768px) {
   .div_thethao_page {
     overflow: hidden;
