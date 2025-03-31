@@ -40,6 +40,8 @@ html {
   --font-heading-family: 'SF Pro Display', sans-serif;
 
   --font-body-family: 'SF Pro Display', sans-serif;
+  --vh: 1vh;
+
 }
 
 @media (min-width: 576px) {

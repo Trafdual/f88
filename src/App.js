@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import WithdrawMoney from './view/frontend/pages/Profile/WithdrawMoney'
 import WebsiteLayout from './view/frontend/layouts/WebsiteLayout'
@@ -23,6 +23,19 @@ import DaGaMobile from './view/frontend/pages/DaGa/DaGaMobile'
 import PromotionLayout from './view/frontend/pages/Promotion/PromotionLayout'
 
 function App () {
+  const updateVH = () => {
+    document.documentElement.style.setProperty(
+      '--vh',
+      `${window.innerHeight / 80}px`
+    )
+  }
+
+  useEffect(() => {
+    updateVH()
+    window.addEventListener('resize', updateVH)
+    return () => window.removeEventListener('resize', updateVH)
+  }, [])
+
   return (
     <Router>
       <div>
