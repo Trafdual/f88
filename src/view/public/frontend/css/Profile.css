@@ -622,38 +622,36 @@ button.btnruttien_depoin {
 .WithdrawApplication.box-tocal .item-withdraw-header span {
   font-size: 16px;
 }
-.item-withdraw-header-deposite{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 70px;
-    margin: 0 6px 5px 0;
-    color: #3f4f75;
-    font-size: 15px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    list-style: none;
-    padding: 10px;
-    border: 1px #636363 solid;
+.item-withdraw-header-deposite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 70px;
+  margin: 0 6px 5px 0;
+  color: #3f4f75;
+  font-size: 15px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  list-style: none;
+  padding: 10px;
+  border: 1px #636363 solid;
 }
 .item-withdraw-header-deposite span {
-    margin-left: 5px;
-    font-size: 19px;
-    color: #444;
-  }
+  margin-left: 5px;
+  font-size: 19px;
+  color: #444;
+}
 .withdraw-content .ant-card-head-title {
   text-transform: uppercase;
 }
 .item-withdraw-header-deposite.active .icon-banking {
-    background: #189cff;
-    
-  }
-  .item-withdraw-header-deposite.active {
-    border: 2px #1f79ff solid;
-    background: #e7f5ff;
-    
-  }
+  background: #189cff;
+}
+.item-withdraw-header-deposite.active {
+  border: 2px #1f79ff solid;
+  background: #e7f5ff;
+}
 
 .item-withdraw-header span {
   margin-left: 5px;
@@ -986,6 +984,7 @@ p.price-lose {
   display: flex;
   justify-content: space-between;
   align-items: end;
+  flex-wrap: wrap;
 }
 
 .selec-bottom {
@@ -1016,7 +1015,7 @@ p.price-lose {
     margin: 12px 0px;
   }
   .flex-historyrut {
-    display:block;
+    display: block;
   }
   .item-member-bannence p {
     font-size: 11px;
@@ -1047,7 +1046,7 @@ p.price-lose {
   .item-withdraw-header {
     padding: 0 !important;
   }
-  button.btnruttien_depoin{
+  button.btnruttien_depoin {
     width: 100% !important;
   }
 }
