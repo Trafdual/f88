@@ -111,7 +111,7 @@ const MemberCenter = () => {
                     className='icon-banecer'
                     style={{
                       backgroundImage:
-                        'url("/announcement.db4b198579b876dc.png")'
+                        'url("/announcement.db4b198579b876dc1.png")'
                     }}
                   ></div>
                   <p>Đăng xuất</p>
