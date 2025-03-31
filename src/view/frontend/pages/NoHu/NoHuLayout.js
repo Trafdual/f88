@@ -13,13 +13,34 @@ function NoHuLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
   const [key, setkey] = useState('pg')
 
-  const [item, setitem] = useState([
-    { name: 'Đường mạt chược', img: '/pggame/mahyong.png' },
-    { name: 'Kho báu Aztec', img: '/pggame/aztec.png' },
-    { name: 'Đường mạt chược 2', img: '/pggame/mahyong2.png' },
-    { name: 'Quyết chiến tiền thương', img: '/pggame/showdown.png' },
-    { name: 'Neko may mắn', img: '/pggame/lucky.png' }
-  ])
+  const selectgame = [
+  {
+    src: '/logo/pglogo.png',
+    key: 'pg',
+    item: [
+      { name: 'Đường mạt chược', img: '/pggame/mahyong.png' },
+      { name: 'Kho báu Aztec', img: '/pggame/aztec.png' },
+      { name: 'Đường mạt chược 2', img: '/pggame/mahyong2.png' },
+      { name: 'Quyết chiến tiền thương', img: '/pggame/showdown.png' },
+      { name: 'Neko may mắn', img: '/pggame/lucky.png' },
+      
+    ]
+  },
+  {
+    src: '/logo/jililogo.png',
+    key: 'jili',
+    item: [
+      { name: 'Siêu cấp Ace', img: '/jiligame/ace.png' },
+      { name: 'Đế quốc hoàng kim', img: '/jiligame/golden.png' },
+      { name: 'Bảo thạch Kala', img: '/jiligame/kala.png' },
+      { name: 'Quyền vương', img: '/jiligame/boxing.png' },
+      { name: 'Ngọc may mắn 2', img: '/jiligame/gems.png' }
+    ]
+  }
+]
+
+
+  const [item, setitem] = useState(selectgame[0].item)
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,30 +51,7 @@ function NoHuLayout () {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const selectgame = [
-    {
-      src: '/logo/pglogo.png',
-      key: 'pg',
-      item: [
-        { name: 'Đường mạt chược', img: '/pggame/mahyong.png' },
-        { name: 'Kho báu Aztec', img: '/pggame/aztec.png' },
-        { name: 'Đường mạt chược 2', img: '/pggame/mahyong2.png' },
-        { name: 'Quyết chiến tiền thương', img: '/pggame/showdown.png' },
-        { name: 'Neko may mắn', img: '/pggame/lucky.png' }
-      ]
-    },
-    {
-      src: '/logo/jililogo.png',
-      key: 'jili',
-      item: [
-        { name: 'Siêu cấp Ace', img: '/jiligame/ace.png' },
-        { name: 'Đế quốc hoàng kim', img: '/jiligame/golden.png' },
-        { name: 'Bảo thạch Kala', img: '/jiligame/kala.png' },
-        { name: 'Quyền vương', img: '/jiligame/boxing.png' },
-        { name: 'Ngọc may mắn 2', img: '/jiligame/gems.png' }
-      ]
-    }
-  ]
+
 
   return (
     <div className='div_thethao_page'>

@@ -1,4 +1,3 @@
-
 .div_gamemobile_container {
   --tw-bg-opacity: 1;
   background-color: rgb(255, 255, 255, 1);
@@ -12,7 +11,7 @@
 
 .section_sidebar {
   bottom: auto;
-  height: 588px;
+  height: 680px;
   opacity: 1;
   position: absolute;
   top: 0;
@@ -112,6 +111,8 @@
 .section_listgame {
   width: 75%;
   height: 100%;
+  max-height: 680px;
+  overflow-y: auto;
 }
 
 .div_listgame_container {
@@ -133,7 +134,6 @@
   width: 100px;
   text-align: center;
 }
-
 
 .div_game_list img {
   width: 100px;

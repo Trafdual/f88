@@ -29,9 +29,9 @@ function GameMobile ({ listdanhsach, selectedKey, setkey, setitem, item }) {
               ))}
             </ul>
           </div>
-          <div className='div_muiten_container'>
+          {/* <div className='div_muiten_container'>
             <FontAwesomeIcon icon={faChevronDown} />
-          </div>
+          </div> */}
         </section>
       </section>
 
