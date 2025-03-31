@@ -24,7 +24,7 @@ function TheThaoMobile() {
   const thethao = [
     { name: "SABA Sports", img: "/afb2.jpg" },
     { name: "SABA Sports", img: "/bti2.jpg" },
-    { name: "SABA Sports", img: "/saba2.jpg" },
+    { name: "SABA Sports", img: "/sabamobile.png" },
   ];
 
   return (

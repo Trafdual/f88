@@ -6,18 +6,17 @@ const BoxSigninSucecs = () => {
       <ul>
         <li>
           <Link to='/LayoutProfileMobile/Deposit'>
-            <img src='/icon1.png' alt='' />
+            <img style={{ width: '40px' }} src='/b04f2d4b96137eb35597bca4b4ab3a5a.png' alt='' />
             <span>Nạp tiền</span>
           </Link>
         </li>
 
         <li>
           <Link to='/LayoutProfileMobile/withdrawApplication'>
-            <img src='/b04f2d4b96137eb35597bca4b4ab3a5a.png' alt='' />
+            <img src='/deposit.bebc07ae6c5ab352.png' alt='' />
             <span>Rút tiền</span>
           </Link>
         </li>
-
         <li>
           <Link to='/'>
             <img src='/3a63139307f5f1c83e9dba580f017d4c.png' alt='' />

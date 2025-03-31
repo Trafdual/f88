@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { faSync } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const MemberCenter = () => {
   return (
     <>
@@ -10,7 +11,8 @@ const MemberCenter = () => {
           <p> Trung Tâm Hội Viên </p>
           <Link>
             {' '}
-            Số dư tài khoản <span>0</span>
+            Số dư tài khoản <span>0</span> {' '}
+            <FontAwesomeIcon icon={faSync} />
           </Link>
         </div>
 
