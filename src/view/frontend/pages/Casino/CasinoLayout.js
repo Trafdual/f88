@@ -85,7 +85,7 @@ function CasinoLayout () {
         ></div>
       )}
       <NewsNotification />
-      {dangnhapstatus && (
+      {isMobile && dangnhapstatus && (
         <div className='box-login-sigin-respert'>
           <div className='member-name-login'>
             <div className='singin-name'>
