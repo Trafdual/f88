@@ -175,7 +175,6 @@ const Deposit = () => {
                       placeholder='Nhập số tiền'
                       onChange={e => settienvalue(e.target.value)}
                     />
-                    <span>VNĐ</span>
                   </div>
                   <div className='chonganhangfooter_poind'>
                     <span> = {(Number(tienvalue) * 1000).toLocaleString()} VNĐ</span>
