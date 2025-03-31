@@ -1,18 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 const BoxSigninSucecs = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   return (
     <div>
       <ul>
         <li>
-          <Link to='/LayoutProfileMobile/Deposit'>
+          <Link to={isMobile?'/LayoutProfileMobile/Deposit':'/WebsiteProfile/Deposit'}>
             <img src='/icon1.png' alt='' />
             <span>Nạp tiền</span>
           </Link>
         </li>
 
         <li>
-          <Link to='/LayoutProfileMobile/withdrawApplication'>
+          <Link to={isMobile?'/LayoutProfileMobile/withdrawApplication':'/WebsiteProfile/withdrawApplication'}>
             <img src='/b04f2d4b96137eb35597bca4b4ab3a5a.png' alt='' />
             <span>Rút tiền</span>
           </Link>
