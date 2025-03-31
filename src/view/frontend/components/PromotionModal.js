@@ -78,7 +78,6 @@ const PromotionModal = ({ isOpen, onClose }) => {
 
   const [list, setlist] = useState(data[0].list)
   const [activeTab, setActiveTab] = useState('HOT')
-  console.log(list)
 
   return (
     <>
