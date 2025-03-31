@@ -209,7 +209,7 @@ const Home = () => {
 
           {DangNhapStatus && (
             <div className="box-login-sigin-respert">
-              <div class="member-name-login">
+              <div className="member-name-login">
                 <div className="singin-name">
                   <p> ALO123123 </p>
                   <span>0 </span>

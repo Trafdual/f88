@@ -97,7 +97,7 @@ const WithdrawApplication = () => {
 
             {activeTab === 'usdt' && (
               <>
-                <div class='divinputmangluoi_depoin'>
+                <div className='divinputmangluoi_depoin'>
                   <input type='radio' checked />
                   <img alt='' width='30' height='30' src='/usdt.svg' />
                   <span>USDT</span>

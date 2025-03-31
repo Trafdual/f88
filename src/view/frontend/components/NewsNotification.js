@@ -1,11 +1,13 @@
+/* eslint-disable jsx-a11y/no-distracting-elements */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const NewsNotification = () => {
-  const newsList = [
-    "🎁 ĐỔI AVATAR F8BET NGAY - NHẬN QUÀ LIỀN TAY: Thay đổi ảnh đại diện nhận lì xì đến từ F8BET, còn chần chờ gì nữa !!!",
-    "🧧Siêu sự kiện 'ĐẠI TIỆC BÍ ẨN NGÀY 25' đã phát thưởng thành công vào 25/03/2025! Hàng loạt phần thưởng giá trị sẽ được trao đến những hội viên may mắn, hãy nhanh tay tham gia! 🎁✨",
-    "📢 SERI KHUYẾN MÃI MỪNG ĐẠI LỄ",
-  ];
+  // const newsList = [
+  //   "🎁 ĐỔI AVATAR F8BET NGAY - NHẬN QUÀ LIỀN TAY: Thay đổi ảnh đại diện nhận lì xì đến từ F8BET, còn chần chờ gì nữa !!!",
+  //   "🧧Siêu sự kiện 'ĐẠI TIỆC BÍ ẨN NGÀY 25' đã phát thưởng thành công vào 25/03/2025! Hàng loạt phần thưởng giá trị sẽ được trao đến những hội viên may mắn, hãy nhanh tay tham gia! 🎁✨",
+  //   "📢 SERI KHUYẾN MÃI MỪNG ĐẠI LỄ",
+  // ];
 
   return (
     <div className="news-notification">

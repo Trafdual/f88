@@ -196,7 +196,7 @@ const Deposit = () => {
                   </div>
                 </div>
 
-                <button class='btnruttien_depoin' type='submit'>
+                <button className='btnruttien_depoin' type='submit'>
                   Lấy thông tin thanh toán
                 </button>
               </form>
@@ -226,9 +226,9 @@ const Deposit = () => {
                   ></path>
                 </svg>
               </div>
-              <div class='diachivi'>
+              <div className='diachivi'>
                 <span>Địa chỉ ví USDT-BEP20:</span>
-                <div class='divlinklienketvi'>
+                <div className='divlinklienketvi'>
                   <span>0xde9ef1a6224f528e515e7ee6d7002eccc5fb9b65</span>
                   <div
                     onClick={() =>

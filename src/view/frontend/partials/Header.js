@@ -124,7 +124,7 @@ const Header = ({ onLoginClick, onSignupClick }) => {
                 <p>{new Date().toLocaleString()}</p>
               </div>
               <div className='box-nav-desk-header-top'>
-                <ul class='box-no-active-sigin'>
+                <ul className='box-no-active-sigin'>
                   <li>
                     <Link to='/promotion'>
                       <img src='/icon1.png' alt='' />
