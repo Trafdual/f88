@@ -8,8 +8,10 @@ import ListGame from '../../components/ListGame'
 import ListGameMobile2 from '../../components/ListGameMobile2'
 import MenuMobile from '../../components/MenuMobile'
 
+
 function DaGaLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,15 +22,14 @@ function DaGaLayout () {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const thethao = [
-    
-    { name: 'COCKFIGHT', img: '/cockfight.webp' }
-  ]
+  const thethao = [{ name: 'COCKFIGHT', img: '/cockfight.webp' }]
 
   return (
     <div className='div_thethao_page'>
       {isMobile ? <div></div> : <div className='banner_game'></div>}
       <NewsNotification />
+      
+
       {isMobile && <MenuMobile />}
       <div className='div_name_game_tong'>
         <NameGame
