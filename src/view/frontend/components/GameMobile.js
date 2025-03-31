@@ -1,7 +1,7 @@
 import '../../public/frontend/css/gamemobile.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function GameMobile ({ listdanhsach, selectedKey, setkey, setitem, item }) {
   return (

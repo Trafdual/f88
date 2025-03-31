@@ -9,10 +9,14 @@ import MenuMobile from '../../components/MenuMobile'
 import Game from '../../components/Game'
 import SelectGame from '../../components/SelectGame'
 import GamePartListCasinoGreat from '../../components/ListGameCasinoAndGreat'
+import BoxSigninSucecs from '../../components/BoxSigninSucecs'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSync } from '@fortawesome/free-solid-svg-icons'
 
 function CasinoLayout () {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768)
   const [key, setkey] = useState('wm')
+  const dangnhapstatus = sessionStorage.getItem('dangnhap')
 
   const [item, setitem] = useState({
     src: '/logo/wmgame.png',
@@ -81,6 +85,22 @@ function CasinoLayout () {
         ></div>
       )}
       <NewsNotification />
+      {dangnhapstatus && (
+        <div className='box-login-sigin-respert'>
+          <div className='member-name-login'>
+            <div className='singin-name'>
+              <p> ALO123123 </p>
+              <span>0 </span>
+
+              <FontAwesomeIcon icon={faSync} />
+            </div>
+          </div>
+          <div className='box-member-right-login'>
+            <BoxSigninSucecs />
+          </div>
+        </div>
+      )}
+
       {isMobile && <MenuMobile />}
 
       <div className='div_name_game_tong'>

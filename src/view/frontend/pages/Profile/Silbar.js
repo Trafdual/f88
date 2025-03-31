@@ -52,7 +52,7 @@ const Silbar = () => {
             <span>0</span>
           </div>
 
-          <div class='menuprofile_vip_item_price'>
+          <div className='menuprofile_vip_item_price'>
             <i>
               <img src='/hang.png' alt='' width='24' height='24' />
             </i>

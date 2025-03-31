@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { Select } from "antd";
 import { Form, Input, Button, Card } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
-const { Option } = Select;
 
 const SecurityList = () => {
   const [activeTab, setActiveTab] = useState("");

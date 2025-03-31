@@ -1047,4 +1047,7 @@ p.price-lose {
   .item-withdraw-header {
     padding: 0 !important;
   }
+  button.btnruttien_depoin{
+    width: 100% !important;
+  }
 }
