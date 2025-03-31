@@ -23,18 +23,7 @@ import DaGaMobile from './view/frontend/pages/DaGa/DaGaMobile'
 import PromotionLayout from './view/frontend/pages/Promotion/PromotionLayout'
 
 function App () {
-  const updateVH = () => {
-    document.documentElement.style.setProperty(
-      '--vh',
-      `${window.innerHeight / 80}px`
-    )
-  }
 
-  useEffect(() => {
-    updateVH()
-    window.addEventListener('resize', updateVH)
-    return () => window.removeEventListener('resize', updateVH)
-  }, [])
 
   return (
     <Router>
