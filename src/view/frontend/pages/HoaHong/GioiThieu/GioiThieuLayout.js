@@ -1,5 +1,5 @@
 import '../../../../public/frontend/scss/gioithieu.scss'
-import { toast } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 function GioiThieuLayout () {
@@ -8,8 +8,8 @@ function GioiThieuLayout () {
       .writeText(text)
       .then(() => {
         toast.success('Sao chép thành công!', {
-          position: 'top-center',
-          autoClose: 2000 // Ẩn sau 2 giây
+          position: 'top-right',
+          autoClose: 3000 // Ẩn sau 2 giây
         })
       })
       .catch(() => {
@@ -19,6 +19,7 @@ function GioiThieuLayout () {
 
   return (
     <div className='divtongquan_container'>
+      <ToastContainer position='top-right' autoClose={3000} />
       <div className='tongquan_header'>
         <div className='tongquan_title'>
           <img src='/images/hoahonggt.png' alt='' width={24} height={24} />
