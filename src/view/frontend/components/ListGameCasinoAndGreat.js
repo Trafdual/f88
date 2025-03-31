@@ -12,7 +12,7 @@ const GamePartListCasinoGreat = () => {
           <div className="clm" style={{ "--w-lg": 4, "--w-md": 4, "--w-xs": 4 }}>
             <div className="item-game-part-games">
               <Link>
-                <img src="/dg.png" alt="" />
+                <img src="/gamefavorite/f1/dg.png" alt="" />
                 <span>DG Trực Tuyến</span>
               </Link>
             </div>
@@ -21,7 +21,7 @@ const GamePartListCasinoGreat = () => {
           <div className="clm" style={{ "--w-lg": 4, "--w-md": 4, "--w-xs": 4 }}>
             <div className="item-game-part-games">
               <Link>
-                <img src="/se.png" alt="" />
+                <img src="/gamefavorite/f1/se.png" alt="" />
                 <span>SE Trực Tuyến</span>
               </Link>
             </div>
@@ -30,7 +30,7 @@ const GamePartListCasinoGreat = () => {
           <div className="clm" style={{ "--w-lg": 4, "--w-md": 4, "--w-xs": 4 }}>
             <div className="item-game-part-games">
               <Link>
-                <img src="/1fd5c51c4e9947f88bd972fe17f4710f.png" alt="" />
+                <img src="/gamefavorite/f1/1fd5c51c4e9947f88bd972fe17f4710f.png" alt="" />
                 <span>WM Trực Tuyến</span>
               </Link>
             </div>

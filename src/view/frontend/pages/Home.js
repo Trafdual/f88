@@ -225,14 +225,47 @@ const Home = () => {
 
           <div className='game-part-list'>
             <div className='row'>
+            <div
+                className='clm'
+                style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
+              >
+                <div className='item-game-part-games'>
+                  <Link>
+                    <img src='/gamefavorite/f1/1fd5c51c4e9947f88bd972fe17f4710f.png' alt='' />
+                    <span>WM Trực Tuyến</span>
+                  </Link>
+                </div>
+              </div>
               <div
                 className='clm'
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link to='/thethaomobile'>
-                    <img src='/ICONTT.a6397ad290b8d7b609f6.png' alt='' />
-                    <span>Thể Thao</span>
+                  <Link>
+                    <img src='/gamefavorite/f1/dg.png' alt='' />
+                    <span>DG Trực Tuyến</span>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className='clm'
+                style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
+              >
+                <div className='item-game-part-games'>
+                  <Link>
+                    <img src='/gamefavorite/f1/se.png' alt='' />
+                    <span>SE Trực Tuyến</span>
+                  </Link>
+                </div>
+              </div>
+              <div
+                className='clm'
+                style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
+              >
+                <div className='item-game-part-games'>
+                  <Link>
+                    <img src='/gamefavorite/f1/20831182e41d463287cc9cc2ab3ec5a6.png' alt='' />
+                    <span>Saba Thể Thao</span>
                   </Link>
                 </div>
               </div>
@@ -242,9 +275,9 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link to='casino'>
-                    <img src='/ICONCASINO.c43a0fd18f4d128a6f8c.png' alt='' />
-                    <span>Casino</span>
+                  <Link>
+                    <img src='/gamefavorite/f1/35a154f58e284c81a71ac97110ca2965.png' alt='' />
+                    <span>Siêu Cấp Ace</span>
                   </Link>
                 </div>
               </div>
@@ -253,9 +286,9 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link to='/banca'>
-                    <img src='/ICONBANCA.94f75c355a1e4c092627.png  ' alt='' />
-                    <span>Bắn Cá</span>
+                  <Link >
+                    <img src='/gamefavorite/f1/7b14aca0a3f54025a6c783596e604885.png  ' alt='' />
+                    <span>Kho Báu Aztec</span>
                   </Link>
                 </div>
               </div>
@@ -264,24 +297,14 @@ const Home = () => {
                 style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
               >
                 <div className='item-game-part-games'>
-                  <Link to='/nohu'>
-                    <img src='/ICONSLOT.00fe6ed1eadc0116578a.png' alt='' />
-                    <span>Slot</span>
+                  <Link>
+                    <img src='/gamefavorite/f1/72ca67ddb84945429d4f5eac9584c985.png' alt='' />
+                    <span>Đánh Mạt Chược</span>
                   </Link>
                 </div>
               </div>
 
-              <div
-                className='clm'
-                style={{ '--w-lg': 4, '--w-md': 4, '--w-xs': 4 }}
-              >
-                <div className='item-game-part-games'>
-                  <Link to='/daga'>
-                    <img src='/ICONDAGA.8c269ccc0d1aa8033ac8.png' alt='' />
-                    <span>Đá Gà</span>
-                  </Link>
-                </div>
-              </div>
+              
             </div>
           </div>
 
